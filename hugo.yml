@@ -1,6 +1,6 @@
 languageCode:           "en"
 title:                  "ECorE"
-baseURL:                "https://ecore.github.io"
+baseURL:                "https://ecore-mu.github.io"
 
 security:
   enableInlineShortcodes: true
@@ -84,11 +84,11 @@ module:
 params:
   description:          "Systems, research, engineering notes, and announcements from ECorE."
   author:               "ECorE"
-  main:                 "https://ecore.github.io"
-  github_org:           "https://github.com/ECorE"
+  main:                 "https://ecore-mu.github.io"
+  github_org:           "https://github.com/ECorE-mu"
   linkedin:             "https://www.linkedin.com/company/ecoremu/"
-  repo:                 "https://github.com/ECorE/ECorE.github.io"
-  blog:                 "https://ecore.github.io/"
+  repo:                 "https://github.com/ECorE-mu/ECorE-mu.github.io"
+  blog:                 "https://ecore-mu.github.io/"
 
   # This is currently used by Hugo's internal templates; the first image
   # in the following array is always used, unless specified in the front matter

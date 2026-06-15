@@ -6,15 +6,15 @@
   "author": "ECorE",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ECorE/ECorE.github.io.git"
+    "url": "git+https://github.com/ECorE-mu/ECorE-mu.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/ECorE/ECorE.github.io/issues"
+    "url": "https://github.com/ECorE-mu/ECorE-mu.github.io/issues"
   },
   "main": "",
   "keywords": [],
   "license": "MIT",
-  "homepage": "https://ecore.github.io",
+  "homepage": "https://ecore-mu.github.io",
   "hugo-bin": {
     "buildTags": "extended",
     "version": "0.134.3"
