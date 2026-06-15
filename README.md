@@ -1,6 +1,6 @@
-# ECorE Journal
+# ECorE
 
-The ECorE website and journal, built with [Hugo](https://gohugo.io/) and [Bootstrap](https://getbootstrap.com/).
+The ECorE website, built with [Hugo](https://gohugo.io/) and [Bootstrap](https://getbootstrap.com/).
 
 ## Development
 
@@ -13,7 +13,7 @@ The local site runs at <http://localhost:4000>.
 
 ## Content
 
-- Journal posts: `src/content/posts/`
+- Posts: `src/content/posts/`
 - Board members: `src/data/members.json`
 - Site templates: `src/layouts/`
 - ECorE styles: `src/assets/scss/_ecore.scss`

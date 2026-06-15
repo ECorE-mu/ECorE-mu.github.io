@@ -1,3 +1,3 @@
 ---
-title: ECorE Journal
+title: ECorE
 ---

@@ -1,6 +1,6 @@
 {
-  "name": "ecore-journal",
-  "description": "ECorE systems, research, and engineering journal.",
+  "name": "ecore-site",
+  "description": "ECorE systems, research, and engineering site.",
   "version": "1.0.0",
   "private": true,
   "author": "ECorE",
