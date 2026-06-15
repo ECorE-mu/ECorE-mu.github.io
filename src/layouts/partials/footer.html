@@ -1,0 +1,34 @@
+<footer class="bd-footer ecore-footer mt-auto">
+  <div class="container py-4 px-4 px-md-3 text-body-secondary">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="{{ "/" | relURL }}" aria-label="ECorE">
+          <img class="footer-logo me-2" src="{{ "/assets/brand/ecore-logo.png" | relURL }}" alt="" width="64" height="40">
+          <span class="fs-5">ECorE</span>
+        </a>
+        <ul class="list-unstyled small">
+          <li class="mb-2">A public record of systems work, research, and releases.</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{ "/board/" | relURL }}">Board</a></li>
+          <li class="mb-2"><a href="{{ "/archive/" | relURL }}">Archive</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Project</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener">GitHub organization</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Social</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

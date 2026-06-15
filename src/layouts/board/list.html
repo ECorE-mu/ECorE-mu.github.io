@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="board-container mx-auto py-5">
+  <header class="board-heading">
+    <div>
+      <p class="section-kicker">People / stewardship</p>
+      <h1>Board<span>.</span></h1>
+    </div>
+    <p>Independent thinkers and engineers responsible for the direction, integrity, and continuity of ECorE.</p>
+  </header>
+
+  <div class="board-register">
+    <span>{{ len site.Data.members }} {{ cond (eq (len site.Data.members) 1) "member" "members" }}</span>
+    <span>ECorE / Board</span>
+  </div>
+
+  <div class="row board-grid">
+    {{ range $index, $member := site.Data.members }}
+    <div class="col-md-6 col-xl-4">
+      <article class="card member-card h-100">
+        <div class="member-avatar">
+          <span class="member-index">{{ printf "%02d" (add $index 1) }}</span>
+          <img src="{{ $member.avatarUrl }}" class="card-img-top" alt="{{ $member.name }}" loading="{{ cond (eq $index 0) "eager" "lazy" }}">
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">{{ $member.name }}</h2>
+          <p class="card-text text-body-secondary">{{ default "Board member" $member.bio }}</p>
+          <div class="d-flex flex-wrap member-links">
+            {{ range $name, $url := $member.links }}
+              {{ with $url }}
+              <a class="btn btn-sm btn-outline-secondary text-capitalize" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $name }}</a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </article>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

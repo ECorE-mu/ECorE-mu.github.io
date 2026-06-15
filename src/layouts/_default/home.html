@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="journal-index mx-auto py-5">
+  <div class="transmission-list">
+    {{ $paginator := .Paginate (where site.RegularPages "Type" "posts") -}}
+    {{- range $i, $page := $paginator.Pages -}}
+      <article class="transmission{{ if eq $i 0 }} transmission-featured{{ end }}">
+        <div class="transmission-code">TX-{{ printf "%02d" (add $i 1) }}</div>
+        <div class="transmission-body">
+          <div class="transmission-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | dateFormat "02 Jan 2006" }}</time>
+            {{ with index .Params.keywords 0 }}<span>{{ . }}</span>{{ end }}
+          </div>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <div class="transmission-summary"><p>{{ .Description }}</p></div>
+          <a class="transmission-link" href="{{ .RelPermalink }}">Open note <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    {{- end }}
+  </div>
+
+  {{ if or $paginator.HasNext $paginator.HasPrev }}
+  <div class="pagination journal-pagination">
+    {{- if $paginator.HasNext -}}
+      <a class="pagination-item older" href="{{ $paginator.Next.URL }}">Older</a>
+    {{- else -}}
+      <span class="pagination-item older">Older</span>
+    {{- end }}
+    {{ if $paginator.HasPrev -}}
+      <a class="pagination-item newer" href="{{ $paginator.Prev.URL }}">Newer</a>
+    {{- else -}}
+      <span class="pagination-item newer">Newer</span>
+    {{- end }}
+  </div>
+  {{ end }}
+</div>
+{{- end }}
