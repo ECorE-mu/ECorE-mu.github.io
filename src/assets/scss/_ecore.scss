@@ -480,7 +480,7 @@ pre,
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: var(--member-image-position, 50% 32%);
+    object-position: top center;
     filter: saturate(.72) contrast(1.04);
     transition: filter .3s ease, transform .45s ease;
   }

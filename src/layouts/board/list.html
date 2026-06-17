@@ -19,7 +19,7 @@
       <article class="card member-card h-100">
         <div class="member-avatar">
           <span class="member-index">{{ printf "%02d" (add $index 1) }}</span>
-          <img src="{{ $member.avatarUrl }}" class="card-img-top" alt="{{ $member.name }}" loading="{{ cond (eq $index 0) "eager" "lazy" }}"{{ with $member.imagePosition }} style="--member-image-position: {{ . }};"{{ end }}>
+          <img src="{{ $member.avatarUrl }}" class="card-img-top" alt="{{ $member.name }}" loading="{{ cond (eq $index 0) "eager" "lazy" }}">
         </div>
         <div class="card-body position-relative">
           <h2 class="h4 card-title">{{ $member.name }}</h2>
