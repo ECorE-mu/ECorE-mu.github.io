@@ -462,7 +462,7 @@ pre,
 
 .member-avatar {
   position: relative;
-  aspect-ratio: 1 / .76;
+  aspect-ratio: 1 / .9;
   overflow: hidden;
   background: var(--ecore-console);
 
@@ -480,6 +480,7 @@ pre,
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: var(--member-image-position, 50% 32%);
     filter: saturate(.72) contrast(1.04);
     transition: filter .3s ease, transform .45s ease;
   }

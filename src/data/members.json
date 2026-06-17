@@ -2,6 +2,7 @@
   {
     "name": "Ahmed Ibrahim",
     "avatarUrl": "https://cdn.discordapp.com/avatars/1208492606774968331/680b49da8d4455095c7a0c0a9f27e245.png?size=4096",
+    "imagePosition": "50% 38%",
     "bio": "",
     "links": {
       "website": "https://l3b4nk4.github.io/",
@@ -9,5 +10,69 @@
       "linkedin": "https://www.linkedin.com/in/l3b4nk4/",
       "x": "https://x.com/L3B4nk4"
     }
+  },
+  {
+  "name": "Basem Mousa",
+  "avatarUrl": "https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/679070231_1005017662187799_1572565797598332366_n.jpg?stp=dst-jpg_tt6&cstp=mx1023x1030&ctp=s1023x1030&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=in0cavle11sQ7kNvwGE1iEH&_nc_oc=Adr5kgYew1hwqpoSI7IP2XIDb4ettEb85vjwi_UytD4jQHnGrHOT2ECnYhHDjpFkk_4&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=OuTpTyyJro0e0ytryI_Hyg&_nc_ss=7b2a8&oh=00_Af80LphTDOBEhQHSpfScT98EFg2aJqd7-05cxzviKbqctQ&oe=6A37EB6E",
+  "imagePosition": "50% 24%",
+  "bio": "",
+  "links": {
+    "github": "https://github.com/Basem241005",
+    "linkedin": "https://www.linkedin.com/in/basemmousa1?utm_source=share_via&utm_content=profile&utm_medium=member_android"
   }
+},
+  {
+  "name": "Asmaa El Banna",
+  "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQGNlpmOfAmfUA/profile-displayphoto-crop_800_800/B4DZ3qQgCaH0AI-/0/1777751693624?e=1783555200&v=beta&t=y4Go1LmG-B0aIVqOkUrpCtaaBACHY7Qe5qYUv4_ETSA",
+  "imagePosition": "58% 22%",
+  "bio": "",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/asmaa-el-banna-140385349",
+    "github": "https://github.com/asmaaalbnna-png"
+  }
+},
+  {
+  "name": "Ahmed Sarhan",
+  "avatarUrl": "https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/490266646_1704333343625262_8039459661653095614_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Xmj5LyQvZNgQ7kNvwG_-Smo&_nc_oc=AdpQxk4d13elK_3_qMbFKchGpfq8aoiV4VJorCvmoLT979HXCDHHwf1J9MN6n1UM_qQ&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=P_eClhTmn0KcjdIwlMmj3w&_nc_ss=7b2a8&oh=00_Af_FRZoOX-bUNLVLACVNI7yqMni5O1Zzi8pbK7Do7Qe5Mw&oe=6A37EC37",
+  "imagePosition": "50% 20%",
+  "bio": "",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/ahmed-sarhan-685aa0375?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "facebook": "https://www.facebook.com/share/1DS5Jfze75/"
+  }
+},
+  {
+  "name": "Haneen Saber",
+  "avatarUrl": "https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/702403965_1360164732630460_6893683718028883644_n.jpg?stp=dst-jpg_tt6&cstp=mx1188x1200&ctp=s1188x1200&_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Triz5ORMXpsQ7kNvwGODEET&_nc_oc=AdoGlI7YHSvtSNEm_n2v9njEG8FsijTdiTGm3a0Oimb4mSi5_FsDJTQv8C_RX0d6pL4&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=3z3GYh-u8dOju30AlxVlkg&_nc_ss=7b2a8&oh=00_Af8ZeVkbGOjHssvAtT-w3psTGFLXLoBOZBlPhTk39saTig&oe=6A37FEF4",
+  "imagePosition": "52% 24%",
+  "bio": "",
+  "links": {
+    "facebook": "https://www.facebook.com/share/197US33JCJ/",
+    "linkedin": "https://www.linkedin.com/in/haneen-mohamed-saber-845816378",
+    "x": "https://x.com/HaneenM97213"
+  }
+},
+  {
+  "name": "Ahmed Yaser",
+  "avatarUrl": "https://pbs.twimg.com/profile_images/1808185917724844032/hd3M172r_400x400.jpg",
+  "imagePosition": "50% 28%",
+  "bio": "",
+  "links": {
+    "x": "https://x.com/eng_ahmedyaser",
+    "linkedin": "https://www.linkedin.com/in/eng-ahmedyaser/",
+    "github": "https://github.com/eng-ahmedyaser"
+  }
+},
+  {
+  "name": "Omar Soliman",
+  "avatarUrl": "https://cdn.discordapp.com/avatars/908735641297256448/a6fbbe461d9a6a96e9ac079a72e026f0.png?size=1024",
+  "imagePosition": "50% 35%",
+  "bio": "",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/eng-omarsoliman/",
+    "x": "https://x.com/eng_omarsoliman",
+    "github": "https://github.com/eng-omarsoliman",
+    "facebook": "https://www.facebook.com/omaribrahim2017/"
+  }
+}
 ]
