@@ -1,4 +1,15 @@
 [
+ {
+    "name": "Omar Soliman",
+    "avatarUrl": "https://cdn.discordapp.com/avatars/908735641297256448/a6fbbe461d9a6a96e9ac079a72e026f0.png?size=1024",
+    "bio": "",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/eng-omarsoliman/",
+      "x": "https://x.com/eng_omarsoliman",
+      "github": "https://github.com/eng-omarsoliman",
+      "facebook": "https://www.facebook.com/omaribrahim2017/"
+    }
+  },
   {
     "name": "Ahmed Ibrahim",
     "avatarUrl": "https://cdn.discordapp.com/avatars/1208492606774968331/680b49da8d4455095c7a0c0a9f27e245.png?size=4096",
@@ -55,17 +66,6 @@
       "x": "https://x.com/eng_ahmedyaser",
       "linkedin": "https://www.linkedin.com/in/eng-ahmedyaser/",
       "github": "https://github.com/eng-ahmedyaser"
-    }
-  },
-  {
-    "name": "Omar Soliman",
-    "avatarUrl": "https://cdn.discordapp.com/avatars/908735641297256448/a6fbbe461d9a6a96e9ac079a72e026f0.png?size=1024",
-    "bio": "",
-    "links": {
-      "linkedin": "https://www.linkedin.com/in/eng-omarsoliman/",
-      "x": "https://x.com/eng_omarsoliman",
-      "github": "https://github.com/eng-omarsoliman",
-      "facebook": "https://www.facebook.com/omaribrahim2017/"
     }
   },
   {
