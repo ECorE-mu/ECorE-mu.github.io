@@ -79,11 +79,21 @@
 },
   {
   "name": "Ameen Ramadan",
-  "avatarUrl": "https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-1/474606935_1336330307375174_7622292185203264796_n.jpg?stp=c0.0.1200.1200a_dst-jpg_tt6&cstp=mx1200x1200&ctp=s200x200&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=flZwKh7xVOQQ7kNvwGWtIUS&_nc_oc=Adq19U7h9Z9lcMkz7OBVPfDeY1QIG2SO8oCjN_nzAse5_eNeOjFP_MpGpFOsi6VVmmA&_nc_zt=24&_nc_ht=scontent.fcai19-12.fna&_nc_gid=j0UUZZX6uvOL1ZXCR2wE7w&_nc_ss=7a289&oh=00_Af__EtAtMU9Fc39XvKYtzxIgXnSByBTxrSUZo3c-e5RgZg&oe=6A38832F",
+  "avatarUrl": "https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/474606935_1336330307375174_7622292185203264796_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s1200x1600&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=flZwKh7xVOQQ7kNvwGWtIUS&_nc_oc=Adq19U7h9Z9lcMkz7OBVPfDeY1QIG2SO8oCjN_nzAse5_eNeOjFP_MpGpFOsi6VVmmA&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=rsjdfCL8QD3pE4rnKchdpA&_nc_ss=7b289&oh=00_Af9NLIp8KSmIgG0Z47HpoYXGRtxsTfP-4uclfTV6aKyApg&oe=6A388DAD",
   "bio": "",
   "links": {
     "linkedin": "https://www.linkedin.com/in/ameen-ramadan/",
     "github": "https://github.com/Ameen278"
+  }
+},
+{
+  "name": "Mohamed Attia",
+  "avatarUrl": "https://cdn.discordapp.com/avatars/305483863780622337/05a6569ae7d01e16d87317d47b6691fc.png?size=4096",
+  "bio": "",
+  "links": {
+    "linkedin": "www.linkedin.com/in/mohamed-attia-67852a1b2",
+    "github": "https://github.com/Mo-3at",
+    "facebook": "https://www.facebook.com/TSM.BASEET5/"
   }
 }
 ]
