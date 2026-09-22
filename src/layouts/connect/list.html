@@ -2,28 +2,29 @@
 <div class="board-container mx-auto py-5">
   <header class="board-heading">
     <div>
-      <p class="section-kicker">Communications // Official Touchpoints</p>
+      <p class="section-kicker">Communications // Direct Touchpoints</p>
       <h1>Connect<span>.</span></h1>
     </div>
     <p>Official communication channels to reach the board directors, researchers, and engineers of ECorE.</p>
   </header>
 
-  <!-- 3 Major Spotlight Cards -->
+  <!-- 4 Major Touchpoint Cards -->
   <section class="my-4">
     <div class="row g-4">
       <!-- 1. WhatsApp Card -->
-      <div class="col-md-4">
+      <div class="col-md-6 col-xl-3">
         <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(37, 211, 102, 0.4) !important; background: var(--ecore-surface-raised);">
           <div>
             <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle font-monospace mb-2">HOTLINE</span>
             <h2 class="h5 brand-font mb-1" style="color: #25d366;">WhatsApp &amp; Call</h2>
+            <div class="small font-monospace text-body-secondary mb-2">Replies &lt; 45 mins</div>
             <p class="font-monospace fw-bold fs-6 mb-2" style="color: #25d366;">{{ .Site.Params.whatsapp }}</p>
-            <p class="small text-body-secondary mb-3">Fastest path for rapid inquiries, recruitment questions, partnerships, and technical collaboration.</p>
+            <p class="small text-body-secondary mb-3">Fastest path for rapid inquiries, recruitment questions, and sponsorships.</p>
           </div>
           <div class="d-grid gap-2">
-            <a class="btn btn-sm btn-success font-monospace" href="{{ .Site.Params.whatsapp_link }}" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
-            <div class="d-flex gap-2">
-              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.whatsapp }}">Copy Number 📋</button>
+            <a class="btn btn-sm btn-success font-monospace" href="{{ .Site.Params.whatsapp_link }}" target="_blank" rel="noopener">Chat Now ↗</a>
+            <div class="d-flex gap-1">
+              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.whatsapp }}">Copy 📋</button>
               <button class="btn btn-sm btn-outline-secondary font-monospace toggle-qr-btn" data-target="qr-hugo-wa">QR 📷</button>
             </div>
             <div id="qr-hugo-wa" class="qr-container text-center pt-2 d-none">
@@ -34,18 +35,19 @@
       </div>
 
       <!-- 2. LinkedIn Card -->
-      <div class="col-md-4">
+      <div class="col-md-6 col-xl-3">
         <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(10, 102, 194, 0.4) !important; background: var(--ecore-surface-raised);">
           <div>
             <span class="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle font-monospace mb-2">PROFESSIONAL</span>
-            <h2 class="h5 brand-font mb-1 text-primary">LinkedIn Network</h2>
+            <h2 class="h5 brand-font mb-1 text-primary">LinkedIn</h2>
+            <div class="small font-monospace text-body-secondary mb-2">Corporate Network</div>
             <p class="font-monospace fw-bold fs-6 mb-2" style="color: #0a66c2;">@ecoremu</p>
-            <p class="small text-body-secondary mb-3">Corporate updates, technical releases, student milestones, publications, and recruitment calls.</p>
+            <p class="small text-body-secondary mb-3">Corporate partnerships, research releases, alumni achievements, and career updates.</p>
           </div>
           <div class="d-grid gap-2">
-            <a class="btn btn-sm btn-primary font-monospace" href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">Follow LinkedIn ↗</a>
-            <div class="d-flex gap-2">
-              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.linkedin }}">Copy Link 📋</button>
+            <a class="btn btn-sm btn-primary font-monospace" href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">Follow ↗</a>
+            <div class="d-flex gap-1">
+              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.linkedin }}">Copy 📋</button>
               <button class="btn btn-sm btn-outline-secondary font-monospace toggle-qr-btn" data-target="qr-hugo-in">QR 📷</button>
             </div>
             <div id="qr-hugo-in" class="qr-container text-center pt-2 d-none">
@@ -56,23 +58,41 @@
       </div>
 
       <!-- 3. Facebook Card -->
-      <div class="col-md-4">
+      <div class="col-md-6 col-xl-3">
         <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(24, 119, 242, 0.4) !important; background: var(--ecore-surface-raised);">
           <div>
             <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle font-monospace mb-2">COMMUNITY</span>
-            <h2 class="h5 brand-font mb-1" style="color: #1877f2;">Facebook Hub</h2>
+            <h2 class="h5 brand-font mb-1" style="color: #1877f2;">Facebook</h2>
+            <div class="small font-monospace text-body-secondary mb-2">Student Hub</div>
             <p class="font-monospace fw-bold fs-6 mb-2" style="color: #1877f2;">@ECorEMU</p>
-            <p class="small text-body-secondary mb-3">Campus hackathons, workshop recordings, student forums, photo journals, and announcements.</p>
+            <p class="small text-body-secondary mb-3">Campus workshops, student competitions, photo journals, and announcements.</p>
           </div>
           <div class="d-grid gap-2">
-            <a class="btn btn-sm btn-outline-primary font-monospace" href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener">Visit Facebook ↗</a>
-            <div class="d-flex gap-2">
-              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.facebook }}">Copy Link 📋</button>
+            <a class="btn btn-sm btn-outline-primary font-monospace" href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener">Join ↗</a>
+            <div class="d-flex gap-1">
+              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.facebook }}">Copy 📋</button>
               <button class="btn btn-sm btn-outline-secondary font-monospace toggle-qr-btn" data-target="qr-hugo-fb">QR 📷</button>
             </div>
             <div id="qr-hugo-fb" class="qr-container text-center pt-2 d-none">
               <img src="{{ "/assets/img/qr-fb.png" | relURL }}" alt="Facebook QR" width="130" height="130" class="border p-1 bg-white">
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. GitHub Card -->
+      <div class="col-md-6 col-xl-3">
+        <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(255, 255, 255, 0.2) !important; background: var(--ecore-surface-raised);">
+          <div>
+            <span class="badge bg-secondary-subtle text-secondary-emphasis border border-secondary-subtle font-monospace mb-2">OPEN SOURCE</span>
+            <h2 class="h5 brand-font mb-1">GitHub</h2>
+            <div class="small font-monospace text-body-secondary mb-2">Engineering Code</div>
+            <p class="font-monospace fw-bold fs-6 mb-2">@ECorE-mu</p>
+            <p class="small text-body-secondary mb-3">Public engineering repositories, RTL hardware modules, firmware architectures, and tools.</p>
+          </div>
+          <div class="d-grid gap-2">
+            <a class="btn btn-sm btn-outline-secondary font-monospace" href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener">Explore ↗</a>
+            <button class="btn btn-sm btn-outline-secondary font-monospace copy-btn" data-copy="{{ .Site.Params.github_org }}">Copy 📋</button>
           </div>
         </div>
       </div>
@@ -82,13 +102,21 @@
   <!-- Interactive WhatsApp Composer -->
   <section class="my-5 p-4 border border-secondary-subtle" style="background: var(--ecore-surface-raised);">
     <p class="section-kicker mb-1" style="color: #25d366;">Interactive Dispatcher</p>
-    <h2 class="h4 brand-font mb-2">Compose Direct WhatsApp Message</h2>
+    <h2 class="h4 brand-font mb-2">Compose Direct WhatsApp Inquiry</h2>
     <p class="small text-body-secondary mb-3">Compose your inquiry below to launch WhatsApp pre-filled for <strong style="color: #25d366;">{{ .Site.Params.whatsapp }}</strong>.</p>
+
+    <!-- Topic Presets -->
+    <div class="d-flex flex-wrap gap-2 mb-3" id="hugoTopicChips">
+      <button type="button" class="btn btn-sm btn-outline-secondary font-monospace active" data-topic="General Inquiry" data-template="Hello ECorE leadership, I would like to learn more about your engineering activities and upcoming events.">General Inquiry</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary font-monospace" data-topic="Sponsorship &amp; Partnership" data-template="Greetings ECorE team, our organization is interested in discussing partnership and project sponsorship opportunities.">Sponsorship</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary font-monospace" data-topic="Join the Team / Recruitment" data-template="Hello! I am an engineering student interested in joining ECorE. Could you please share the application dates and requirements?">Recruitment</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary font-monospace" data-topic="Technical Collaboration" data-template="Hi ECorE engineers, we would like to collaborate on an embedded systems / RF research project.">Collaboration</button>
+    </div>
 
     <div class="row g-2 mb-3">
       <div class="col-sm-6">
         <label class="form-label font-monospace small text-body-secondary" for="hugoSenderName">YOUR NAME:</label>
-        <input type="text" id="hugoSenderName" class="form-control font-monospace form-control-sm" placeholder="e.g. Eng. Hazem">
+        <input type="text" id="hugoSenderName" class="form-control font-monospace form-control-sm" placeholder="e.g. Eng. Ahmed">
       </div>
       <div class="col-sm-6">
         <label class="form-label font-monospace small text-body-secondary" for="hugoSenderOrg">AFFILIATION / UNIVERSITY:</label>
@@ -98,7 +126,7 @@
 
     <div class="mb-3">
       <label class="form-label font-monospace small text-body-secondary" for="hugoSenderMsg">YOUR MESSAGE:</label>
-      <textarea id="hugoSenderMsg" class="form-control form-control-sm" rows="3" placeholder="Hello ECorE team, I would like to inquire about..."></textarea>
+      <textarea id="hugoSenderMsg" class="form-control form-control-sm" rows="3">Hello ECorE leadership, I would like to learn more about your engineering activities and upcoming events.</textarea>
     </div>
 
     <button id="hugoSendWaBtn" class="btn btn-success font-monospace px-4 py-2 w-100 fw-bold">
@@ -106,15 +134,19 @@
     </button>
   </section>
 
-  <!-- Headquarters Info -->
+  <!-- Headquarters & Location -->
   <section class="my-4 p-4 border border-secondary-subtle" style="background: var(--ecore-surface);">
-    <h3 class="h5 brand-font mb-2">Team Base &amp; Location</h3>
+    <h3 class="h5 brand-font mb-2">Headquarters &amp; Physical Operations</h3>
     <p class="small text-body-secondary mb-3">Faculty of Engineering, Department of Electronics and Communications (ECE), Mansoura University, Egypt.</p>
-    <div class="row g-2 small font-monospace text-body-secondary">
-      <div class="col-md-4">📍 Mansoura, Dakahlia, Egypt</div>
-      <div class="col-md-4">⏰ Sun - Thu: 09:00 - 18:00 (GMT+2)</div>
-      <div class="col-md-4">📞 {{ .Site.Params.whatsapp }}</div>
+    <div class="row g-2 small font-monospace text-body-secondary mb-3">
+      <div class="col-md-3">📍 Coordinates: 31.0428° N, 31.3533° E</div>
+      <div class="col-md-3">⏰ Sun - Thu: 09:00 - 18:00 (GMT+2)</div>
+      <div class="col-md-3">📞 Hotline: {{ .Site.Params.whatsapp }}</div>
+      <div class="col-md-3">✉ Email: ECorEmu@gmail.com</div>
     </div>
+    <a href="https://maps.google.com/?q=Faculty+of+Engineering+Mansoura+University" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary font-monospace">
+      Open Google Maps ↗
+    </a>
   </section>
 </div>
 
@@ -142,15 +174,27 @@
       });
     });
 
-    // Composer
+    // Topic chips in Hugo
+    let activeTopic = "General Inquiry";
+    const msgArea = document.getElementById("hugoSenderMsg");
+    document.querySelectorAll("#hugoTopicChips button").forEach(chip => {
+      chip.addEventListener("click", () => {
+        document.querySelectorAll("#hugoTopicChips button").forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+        activeTopic = chip.getAttribute("data-topic");
+        if (msgArea) msgArea.value = chip.getAttribute("data-template");
+      });
+    });
+
+    // Composer Send
     const sendBtn = document.getElementById("hugoSendWaBtn");
     if (sendBtn) {
       sendBtn.addEventListener("click", () => {
         const name = (document.getElementById("hugoSenderName").value || "").trim();
         const org = (document.getElementById("hugoSenderOrg").value || "").trim();
-        const msg = (document.getElementById("hugoSenderMsg").value || "").trim() || "Hello ECorE team, I would like to inquire about your engineering activities.";
+        const msg = (msgArea.value || "").trim();
 
-        let fullText = "*ECorE Contact Inquiry*\\n";
+        let fullText = "*ECorE Official Inquiry: " + activeTopic + "*\\n";
         if (name) fullText += "*Name:* " + name + "\\n";
         if (org) fullText += "*Affiliation:* " + org + "\\n";
         fullText += "*Message:* " + msg;
