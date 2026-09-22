@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ECorE — Team, Board &amp; Official Channels</title>
+  <meta name="description" content="Meet the team, board directors, and researchers behind ECorE. Official LinkedIn, Facebook, and WhatsApp hotline (+20 10 40198259).">
+
+  <!-- Open Graph & Twitter Cards -->
+  <meta property="og:title" content="ECorE — Team, Board &amp; Official Channels">
+  <meta property="og:description" content="Meet the people behind ECorE: electronics, systems, communications, and research. Follow our official LinkedIn, Facebook, and WhatsApp hotline.">
+  <meta property="og:image" content="./logo.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ECorE — Team, Board &amp; Official Channels">
+  <meta name="twitter:description" content="Meet the people behind ECorE. Official LinkedIn, Facebook, and WhatsApp hotline (+20 10 40198259).">
+  <meta name="twitter:image" content="./logo.png">
+
+  <!-- Preconnect & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Primary ECorE Compiled CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="./logo.png">
+
+  <style>
+    /* CSS Variables & Theme overrides */
+    :root,
+    [data-bs-theme="dark"] {
+      --ecore-page: #001429;
+      --ecore-surface: #062b46;
+      --ecore-surface-raised: #073452;
+      --ecore-ink: #eef8f5;
+      --ecore-muted: rgba(238, 248, 245, 0.72);
+      --ecore-line: rgba(142, 184, 207, 0.24);
+      --ecore-blue: #00649e;
+      --ecore-blue-rgb: 0, 100, 158;
+      --ecore-gold: #e9a33c;
+      --ecore-gold-glow: rgba(233, 163, 60, 0.35);
+      --ecore-console: #03233a;
+      --ecore-console-soft: #062f4b;
+      --ecore-cyan: #2b82ad;
+      --ecore-cyan-neon: #4dd0e1;
+      --ecore-console-text: #eef8f5;
+      --ecore-console-heading: #f2fffa;
+      --ecore-console-muted: rgba(238, 248, 245, 0.7);
+      --ecore-console-line: rgba(98, 163, 195, 0.25);
+      --ecore-console-grid: rgba(104, 170, 201, 0.05);
+      --ecore-shadow: rgba(0, 8, 20, 0.35);
+      --ecore-shadow-strong: rgba(0, 8, 20, 0.6);
+      --ecore-member-index-bg: rgba(0, 20, 41, 0.88);
+      --wa-green: #25D366;
+      --fb-blue: #1877F2;
+      --in-blue: #0A66C2;
+    }
+
+    [data-bs-theme="light"] {
+      --ecore-page: #edf2f1;
+      --ecore-surface: #f9fbfa;
+      --ecore-surface-raised: #ffffff;
+      --ecore-ink: #111a1f;
+      --ecore-muted: #627078;
+      --ecore-line: #ccd7d8;
+      --ecore-blue: #1379b7;
+      --ecore-blue-rgb: 19, 121, 183;
+      --ecore-gold: #c99a24;
+      --ecore-gold-glow: rgba(201, 154, 36, 0.35);
+      --ecore-console: #071722;
+      --ecore-console-soft: #0d2634;
+      --ecore-cyan: #67c8d9;
+      --ecore-cyan-neon: #0097a7;
+      --ecore-console-text: #dce9eb;
+      --ecore-console-heading: #f3f8f8;
+      --ecore-console-muted: #92aab0;
+      --ecore-console-line: rgba(103, 200, 217, 0.14);
+      --ecore-console-grid: rgba(103, 200, 217, 0.04);
+      --ecore-shadow: rgba(13, 35, 45, 0.08);
+      --ecore-shadow-strong: rgba(5, 18, 25, 0.16);
+      --ecore-member-index-bg: rgba(3, 10, 14, 0.76);
+      --wa-green: #128C7E;
+      --fb-blue: #1877F2;
+      --in-blue: #0A66C2;
+    }
+
+    body {
+      font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--ecore-page);
+      color: var(--ecore-ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    h1, h2, h3, h4, h5, h6, .brand-font {
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .mono-font, .section-kicker, .console-kicker, .transmission-code, .member-index, .telemetry-label {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    /* Animated Ticker */
+    .transmission-ticker {
+      background: var(--ecore-console);
+      border-bottom: 1px solid var(--ecore-console-line);
+      padding: 0.6rem 1rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: var(--ecore-console-text);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      position: relative;
+      z-index: 100;
+    }
+
+    .ticker-content {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00e676;
+      box-shadow: 0 0 8px #00e676;
+      display: inline-block;
+      animation: pulse-glow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+
+    .ticker-typing {
+      display: inline-block;
+      border-right: 2px solid var(--ecore-gold);
+      animation: blink-cursor 0.75s step-end infinite;
+    }
+
+    @keyframes blink-cursor {
+      from, to { border-color: transparent; }
+      50% { border-color: var(--ecore-gold); }
+    }
+
+    /* Navigation */
+    .bd-navbar {
+      backdrop-filter: blur(16px);
+      background-color: rgba(3, 35, 58, 0.85);
+      border-bottom: 1px solid var(--ecore-line);
+      box-shadow: 0 4px 24px var(--ecore-shadow);
+    }
+
+    [data-bs-theme="light"] .bd-navbar {
+      background-color: rgba(249, 251, 250, 0.9);
+    }
+
+    .navbar-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .ecore-nav-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 6px;
+      filter: drop-shadow(0 2px 8px rgba(0, 100, 158, 0.4));
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .navbar-logo-wrap:hover .ecore-nav-logo {
+      transform: scale(1.08) rotate(-2deg);
+    }
+
+    .nav-wordmark {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ecore-ink);
+      letter-spacing: -0.03em;
+    }
+
+    /* Hero / Sidebar Console */
+    .ecore-console {
+      position: sticky;
+      top: 96px;
+      padding: clamp(1.75rem, 3vw, 2.75rem);
+      overflow: hidden;
+      clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+      color: var(--ecore-console-text);
+      background: linear-gradient(var(--ecore-console-grid) 1px, transparent 1px),
+                  linear-gradient(90deg, var(--ecore-console-grid) 1px, transparent 1px),
+                  linear-gradient(145deg, var(--ecore-console-soft), var(--ecore-console) 62%);
+      background-size: 32px 32px, 32px 32px, auto;
+      border: 1px solid var(--ecore-console-line);
+      box-shadow: 0 20px 50px var(--ecore-shadow);
+      position: relative;
+    }
+
+    .ecore-console::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 28px;
+      height: 28px;
+      clip-path: polygon(0 0, 100% 100%, 0 100%);
+      content: "";
+      background: var(--ecore-gold);
+    }
+
+    .console-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.35;
+      z-index: 0;
+    }
+
+    .console-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .console-logo-box {
+      display: inline-block;
+      width: 130px;
+      height: 130px;
+      margin-bottom: 1.5rem;
+      position: relative;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      padding: 10px;
+      border: 1px solid rgba(103, 200, 217, 0.2);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .console-logo-box:hover {
+      transform: translateY(-4px) scale(1.02);
+      border-color: var(--ecore-gold);
+    }
+
+    .ecore-hero-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .console-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.75rem;
+      background: rgba(0, 230, 118, 0.1);
+      border: 1px solid rgba(0, 230, 118, 0.3);
+      border-radius: 20px;
+      font-size: 0.68rem;
+      font-family: "IBM Plex Mono", monospace;
+      color: #69f0ae;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .channel-badge-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin: 1.75rem 0 1.25rem;
+    }
+
+    .channel-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 1rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ecore-console-text);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(103, 200, 217, 0.16);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 4px;
+    }
+
+    .channel-btn:hover {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: var(--ecore-gold);
+      color: var(--ecore-gold);
+      transform: translateX(4px);
+    }
+
+    .channel-btn.wa:hover {
+      border-color: #25D366;
+      color: #25D366;
+      background: rgba(37, 211, 102, 0.1);
+    }
+
+    .channel-btn.in:hover {
+      border-color: #0A66C2;
+      color: #70b5f9;
+      background: rgba(10, 102, 194, 0.12);
+    }
+
+    .channel-btn.fb:hover {
+      border-color: #1877F2;
+      color: #82b9fc;
+      background: rgba(24, 119, 242, 0.12);
+    }
+
+    /* Channel Cards Section */
+    .official-channels-grid {
+      margin: 2.5rem 0 3.5rem;
+    }
+
+    .channel-card {
+      background: var(--ecore-surface-raised);
+      border: 1px solid var(--ecore-line);
+      padding: 1.75rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .channel-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--card-accent, var(--ecore-blue));
+      transition: height 0.3s ease;
+    }
+
+    .channel-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px var(--ecore-shadow-strong);
+      border-color: var(--card-accent, var(--ecore-gold));
+    }
+
+    .channel-card:hover::before {
+      height: 6px;
+    }
+
+    .channel-card.card-wa { --card-accent: #25D366; }
+    .channel-card.card-in { --card-accent: #0A66C2; }
+    .channel-card.card-fb { --card-accent: #1877F2; }
+
+    .channel-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--ecore-line);
+    }
+
+    .card-wa .channel-card-icon { background: rgba(37, 211, 102, 0.15); color: #25D366; }
+    .card-in .channel-card-icon { background: rgba(10, 102, 194, 0.15); color: #0A66C2; }
+    .card-fb .channel-card-icon { background: rgba(24, 119, 242, 0.15); color: #1877F2; }
+
+    /* Animated Counter Section */
+    .counter-stat-box {
+      background: var(--ecore-surface);
+      border: 1px solid var(--ecore-line);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .counter-val {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--bs-emphasis-color);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .counter-val span.accent {
+      color: var(--ecore-gold);
+    }
+
+    .counter-lbl {
+      font-size: 0.72rem;
+      font-family: "IBM Plex Mono", monospace;
+      color: var(--ecore-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Filter & Search Bar */
+    .filter-search-container {
+      background: var(--ecore-surface);
+      border: 1px solid var(--ecore-line);
+      padding: 1.25rem;
+      margin: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .filter-btn {
+      padding: 0.4rem 0.85rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid var(--ecore-line);
+      background: transparent;
+      color: var(--ecore-muted);
+      border-radius: 0;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--ecore-blue);
+      color: #ffffff;
+      border-color: var(--ecore-blue);
+    }
+
+    .filter-btn.active {
+      border-bottom: 2px solid var(--ecore-gold);
+    }
+
+    .search-input-wrap {
+      position: relative;
+      min-width: 260px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--ecore-surface-raised);
+      border: 1px solid var(--ecore-line);
+      color: var(--ecore-ink);
+      padding: 0.45rem 0.85rem 0.45rem 2.2rem;
+      font-size: 0.82rem;
+      font-family: "IBM Plex Mono", monospace;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--ecore-gold);
+      box-shadow: 0 0 0 2px var(--ecore-gold-glow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--ecore-muted);
+      pointer-events: none;
+    }
+
+    /* Member Cards */
+    .member-card {
+      overflow: hidden;
+      background: var(--ecore-surface-raised);
+      border: 1px solid var(--ecore-line);
+      border-radius: 0;
+      transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+      will-change: transform;
+    }
+
+    .member-card:hover {
+      box-shadow: 0 24px 60px var(--ecore-shadow-strong);
+      transform: translateY(-6px);
+      border-color: var(--ecore-cyan);
+    }
+
+    .member-avatar {
+      position: relative;
+      aspect-ratio: 1 / 0.9;
+      overflow: hidden;
+      background: var(--ecore-console);
+    }
+
+    .member-avatar::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      content: "";
+      background: linear-gradient(90deg, var(--ecore-blue), var(--ecore-cyan), var(--ecore-gold));
+      z-index: 2;
+    }
+
+    .member-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: saturate(0.85) contrast(1.04);
+      transition: filter 0.4s ease, transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .member-card:hover .member-avatar img {
+      filter: saturate(1.1) contrast(1.05);
+      transform: scale(1.04);
+    }
+
+    .member-index {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 3;
+      padding: 0.35rem 0.55rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.1em;
+      background: var(--ecore-member-index-bg);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+    }
+
+    .member-track-badge {
+      position: absolute;
+      bottom: 0.75rem;
+      left: 0.75rem;
+      z-index: 3;
+      padding: 0.25rem 0.55rem;
+      font-size: 0.6rem;
+      font-family: "IBM Plex Mono", monospace;
+      color: var(--ecore-gold);
+      background: rgba(3, 35, 58, 0.88);
+      border: 1px solid rgba(233, 163, 60, 0.4);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      backdrop-filter: blur(4px);
+    }
+
+    .member-card .card-body {
+      padding: 1.35rem;
+    }
+
+    .member-card .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.25rem;
+      color: var(--bs-emphasis-color);
+    }
+
+    .member-card .card-text {
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: var(--ecore-muted);
+      min-height: 2.7rem;
+    }
+
+    .member-links {
+      gap: 0.45rem;
+    }
+
+    .member-link-btn {
+      padding: 0.32rem 0.6rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.64rem;
+      border-radius: 0;
+      border-color: var(--ecore-line);
+      color: var(--ecore-ink);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .member-link-btn:hover {
+      color: #ffffff;
+      background-color: var(--ecore-blue);
+      border-color: var(--ecore-blue);
+      transform: translateY(-2px);
+    }
+
+    /* Engineering Pillars */
+    .pillar-card {
+      background: var(--ecore-surface);
+      border: 1px solid var(--ecore-line);
+      padding: 1.75rem;
+      height: 100%;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .pillar-card:hover {
+      border-color: var(--ecore-cyan);
+      box-shadow: 0 12px 30px var(--ecore-shadow);
+      transform: translateY(-4px);
+    }
+
+    .pillar-icon {
+      font-family: "IBM Plex Mono", monospace;
+      color: var(--ecore-gold);
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: #25D366;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .floating-wa-btn:hover {
+      background: #20ba59;
+      color: #ffffff;
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 14px 38px rgba(37, 211, 102, 0.6);
+    }
+
+    .wa-ripple {
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+      border-radius: 50px;
+      border: 2px solid #25D366;
+      animation: ripple-wave 2.2s infinite cubic-bezier(0.1, 0.8, 0.3, 1);
+      pointer-events: none;
+    }
+
+    @keyframes ripple-wave {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.3, 1.6); opacity: 0; }
+    }
+
+    /* Toast Notification */
+    .toast-hud {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--ecore-console);
+      color: #f2fffa;
+      border: 1px solid var(--ecore-gold);
+      padding: 0.8rem 1.5rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      z-index: 10000;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+      transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+      opacity: 0;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .toast-hud.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Scroll reveal base classes */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-on-scroll.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .ecore-console {
+        position: relative;
+        top: auto;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Transmission Live Ticker -->
+  <aside class="transmission-ticker" aria-label="System status announcement">
+    <div class="ticker-content">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      <span class="text-uppercase fw-semibold" style="color: var(--ecore-gold);">[SYS:ACTIVE]</span>
+      <span id="tickerText" class="ticker-typing">ECorE // COHORT 2026 // BOARD DIRECTORY // CONNECTIVITY ONLINE</span>
+    </div>
+    <div class="d-none d-md-flex align-items-center gap-3">
+      <a href="https://wa.me/201040198259" target="_blank" rel="noopener" class="text-decoration-none" style="color: #69f0ae;">
+        <span class="mono-font small">WhatsApp Hotline: +20 10 40198259 ↗</span>
+      </a>
+      <span class="text-secondary">|</span>
+      <span class="mono-font small text-body-secondary">13 MEMBERS</span>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="navbar navbar-expand-lg bd-navbar sticky-top">
+    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+      <a class="navbar-brand navbar-logo-wrap p-0 me-3" href="./index.html" aria-label="ECorE Home">
+        <!-- Logo in same directory -->
+        <img class="ecore-nav-logo" src="./logo.png" alt="ECorE Official Logo" width="48" height="48" onerror="this.onerror=null; this.src='./White and Black Elegant System Logo.png';">
+        <span class="nav-wordmark">ECorE</span>
+      </a>
+
+      <button class="navbar-toggler p-2 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 bd-navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link py-2 px-lg-3 active fw-semibold" aria-current="page" href="#board-members">Board &amp; Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-lg-3" href="./connect.html">Connect &amp; Hotline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-lg-3" href="#engineering-pillars">Tracks &amp; Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-2 px-lg-3" href="https://ecore-mu.github.io/archive/" target="_blank" rel="noopener">Archive ↗</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+          <!-- Direct Channel Shortcuts in Nav -->
+          <a class="btn btn-sm btn-outline-secondary mono-font px-2 py-1" href="https://www.linkedin.com/company/ecoremu/" target="_blank" rel="noopener" aria-label="ECorE LinkedIn">
+            LinkedIn
+          </a>
+          <a class="btn btn-sm btn-outline-secondary mono-font px-2 py-1" href="https://www.facebook.com/ECorEMU" target="_blank" rel="noopener" aria-label="ECorE Facebook">
+            Facebook
+          </a>
+          <a class="btn btn-sm btn-outline-success mono-font px-2 py-1" href="https://wa.me/201040198259" target="_blank" rel="noopener" aria-label="ECorE WhatsApp">
+            WhatsApp
+          </a>
+          <a class="btn btn-sm btn-outline-secondary mono-font px-2 py-1" href="https://github.com/ECorE-mu" target="_blank" rel="noopener" aria-label="ECorE GitHub">
+            GitHub
+          </a>
+
+          <!-- Dark/Light Theme Toggle -->
+          <button id="themeToggleBtn" class="btn btn-sm btn-outline-secondary ms-2" type="button" aria-label="Toggle light and dark mode">
+            <span id="themeIcon">☀ Light</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Site Container -->
+  <div class="container-xxl site-frame px-4 px-xxl-3 my-4">
+    <div class="row g-4 g-xl-5">
+
+      <!-- Left Sidebar Console (Masthead) -->
+      <aside class="col-lg-4 col-xl-3 sidebar">
+        <div class="ecore-console">
+          <!-- Animated Background Canvas -->
+          <canvas id="consoleCanvas" class="console-canvas"></canvas>
+
+          <div class="console-inner">
+            <div class="console-logo-box">
+              <img class="ecore-hero-logo" src="./logo.png" alt="ECorE Logo" width="110" height="110" onerror="this.onerror=null; this.src='./White and Black Elegant System Logo.png';">
+            </div>
+
+            <div class="console-status-pill">
+              <span class="pulse-dot"></span>
+              <span>2026 ACTIVE COHORT</span>
+            </div>
+
+            <p class="console-kicker mb-1">ECorE // SYSTEM CORE</p>
+            <h1 class="h2 brand-font mb-2">ECorE<span>.</span></h1>
+            
+            <p class="console-intro small text-body-secondary mb-3">
+              Electronics and Communications student engineering team at Mansoura University. Bridging theory and industrial practice across embedded, VLSI, communications, and low-level software systems.
+            </p>
+
+            <div class="channel-badge-list">
+              <a class="channel-btn in" href="https://www.linkedin.com/company/ecoremu/" target="_blank" rel="noopener">
+                <span>LinkedIn Company</span>
+                <span class="arrow">↗</span>
+              </a>
+              <a class="channel-btn fb" href="https://www.facebook.com/ECorEMU" target="_blank" rel="noopener">
+                <span>Facebook Page</span>
+                <span class="arrow">↗</span>
+              </a>
+              <a class="channel-btn wa" href="https://wa.me/201040198259" target="_blank" rel="noopener">
+                <span>WhatsApp (+20 10 40198259)</span>
+                <span class="arrow">↗</span>
+              </a>
+              <a class="channel-btn" href="https://github.com/ECorE-mu" target="_blank" rel="noopener">
+                <span>GitHub Organization</span>
+                <span class="arrow">↗</span>
+              </a>
+            </div>
+
+            <hr style="border-color: var(--ecore-console-line);">
+
+            <!-- Telemetry Stats -->
+            <div class="row g-2 text-center">
+              <div class="col-6">
+                <div class="p-2 border" style="border-color: var(--ecore-console-line) !important; background: rgba(0,0,0,0.2);">
+                  <div class="brand-font fs-4 fw-bold" style="color: var(--ecore-gold);">13</div>
+                  <div class="small mono-font text-secondary" style="font-size: 0.65rem;">DIRECTORS</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-2 border" style="border-color: var(--ecore-console-line) !important; background: rgba(0,0,0,0.2);">
+                  <div class="brand-font fs-4 fw-bold" style="color: var(--ecore-cyan);">05</div>
+                  <div class="small mono-font text-secondary" style="font-size: 0.65rem;">DIVISIONS</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Body Content -->
+      <main class="col-lg-8 col-xl-9 main-content">
+
+        <!-- Top Header & Mission Statement -->
+        <section class="journal-heading pb-4 border-bottom border-secondary-subtle reveal-on-scroll">
+          <p class="section-kicker mb-2">People / Stewardship &amp; Technical Direction</p>
+          <h1 class="display-3 fw-bold mb-3 brand-font">Team &amp; Board<span style="color: var(--ecore-gold);">.</span></h1>
+          <p class="lead text-body-secondary" style="max-width: 780px;">
+            Independent thinkers, researchers, and engineers responsible for the direction, architectural integrity, and continuous excellence of ECorE.
+          </p>
+        </section>
+
+        <!-- Official Channels Spotlight Section -->
+        <section id="official-channels" class="official-channels-grid reveal-on-scroll">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 brand-font mb-0">Official Communication Hubs</h2>
+            <span class="mono-font small text-body-secondary">ECorE // REACH OUT</span>
+          </div>
+
+          <div class="row g-3">
+            <!-- LinkedIn Card -->
+            <div class="col-md-4">
+              <div class="channel-card card-in">
+                <div>
+                  <div class="channel-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.81a1.45 1.45 0 0 0-1.45 1.45 1.45 1.45 0 0 0 1.45 1.45 1.45 1.45 0 0 0 1.45-1.45 1.45 1.45 0 0 0-1.45-1.45Z"/></svg>
+                  </div>
+                  <h3 class="h5 brand-font mb-1">LinkedIn Page</h3>
+                  <p class="mono-font small mb-2" style="color: #70b5f9;">@ecoremu</p>
+                  <p class="small text-body-secondary mb-3">
+                    Corporate partnerships, announcements, technical papers, student triumphs, and career milestones.
+                  </p>
+                </div>
+                <a href="https://www.linkedin.com/company/ecoremu/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary mono-font w-100">
+                  Follow on LinkedIn ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- Facebook Card -->
+            <div class="col-md-4">
+              <div class="channel-card card-fb">
+                <div>
+                  <div class="channel-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+                  </div>
+                  <h3 class="h5 brand-font mb-1">Facebook Community</h3>
+                  <p class="mono-font small mb-2" style="color: #82b9fc;">@ECorEMU</p>
+                  <p class="small text-body-secondary mb-3">
+                    Student workshops, photo records, local competitions, campus hackathons, and public events.
+                  </p>
+                </div>
+                <a href="https://www.facebook.com/ECorEMU" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary mono-font w-100">
+                  Visit Facebook Page ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- WhatsApp Hotline Card -->
+            <div class="col-md-4">
+              <div class="channel-card card-wa">
+                <div>
+                  <div class="channel-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.07C9.33 7.07 9.09 7.15 8.89 7.37C8.69 7.59 8.12 8.12 8.12 9.21C8.12 10.3 8.91 11.35 9.02 11.5C9.13 11.65 10.58 13.88 12.8 14.84C13.33 15.07 13.74 15.21 14.06 15.31C14.6 15.48 15.08 15.45 15.46 15.39C15.89 15.33 16.78 14.86 16.96 14.34C17.15 13.82 17.15 13.38 17.09 13.28C17.03 13.19 16.89 13.13 16.68 13.03C16.48 12.93 15.49 12.44 15.3 12.38C15.12 12.31 14.98 12.28 14.85 12.48C14.71 12.68 14.34 13.13 14.23 13.26C14.12 13.39 14 13.4 13.8 13.3C13.59 13.2 12.72 12.91 11.69 11.99C10.89 11.28 10.35 10.4 10.25 10.22C10.15 10.05 10.24 9.95 10.34 9.85C10.43 9.76 10.55 9.61 10.65 9.5C10.75 9.38 10.79 9.3 10.85 9.17C10.92 9.04 10.88 8.92 10.83 8.82C10.78 8.72 10.39 7.76 10.22 7.36C10.06 6.96 9.9 7.02 9.77 7.02C9.65 7.02 9.53 7.07 9.53 7.07Z"/></svg>
+                  </div>
+                  <h3 class="h5 brand-font mb-1">WhatsApp &amp; Phone</h3>
+                  <p class="mono-font small mb-2" style="color: #69f0ae;">+20 10 40198259</p>
+                  <p class="small text-body-secondary mb-3">
+                    Direct line for quick inquiries, admissions, recruitment, sponsorship, and technical team reach-out.
+                  </p>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="https://wa.me/201040198259" target="_blank" rel="noopener" class="btn btn-sm btn-success mono-font flex-grow-1">
+                    Chat Now ↗
+                  </a>
+                  <button class="btn btn-sm btn-outline-secondary mono-font copy-phone-btn" data-phone="+20 10 40198259" title="Copy phone number">
+                    Copy 📋
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Live Animated Telemetry Counters -->
+        <section class="mb-5 reveal-on-scroll">
+          <div class="row g-3">
+            <div class="col-6 col-md-3">
+              <div class="counter-stat-box">
+                <div class="counter-val" data-target="13"><span class="accent">13</span></div>
+                <div class="counter-lbl">Board Directors</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="counter-stat-box">
+                <div class="counter-val" data-target="5">5</div>
+                <div class="counter-lbl">Tech Tracks</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="counter-stat-box">
+                <div class="counter-val" data-target="100">100<span class="accent">%</span></div>
+                <div class="counter-lbl">Student-Led</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="counter-stat-box">
+                <div class="counter-val" data-target="2026">2026</div>
+                <div class="counter-lbl">Current Season</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Team Register & Filter/Search Controls -->
+        <section id="board-members" class="pt-2">
+          <div class="d-flex flex-wrap justify-content-between align-items-center py-2 border-top border-bottom border-secondary-subtle">
+            <span class="mono-font small text-body-secondary text-uppercase">13 MEMBERS ACTIVE &bull; ECorE / BOARD</span>
+            <span class="mono-font small text-body-secondary text-uppercase">COHORT 2026</span>
+          </div>
+
+          <!-- Interactive Filter & Search Bar -->
+          <div class="filter-search-container">
+            <div class="filter-tabs" role="tablist">
+              <button class="filter-btn active" data-filter="all">All Members (13)</button>
+              <button class="filter-btn" data-filter="systems">Systems &amp; Software</button>
+              <button class="filter-btn" data-filter="embedded">Embedded &amp; Hardware</button>
+              <button class="filter-btn" data-filter="comms">Communications &amp; RF</button>
+            </div>
+
+            <div class="search-input-wrap">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="memberSearchInput" class="search-input" placeholder="Search members by name..." aria-label="Search members by name">
+            </div>
+          </div>
+
+          <!-- Member Grid -->
+          <div class="row g-4 board-grid" id="membersGrid">
+            
+    <div class="col-md-6 col-xl-4 member-col" data-track="systems" data-name="omar soliman">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">01</span>
+          <img src="https://avatars.githubusercontent.com/u/101606582?v=4" 
+               class="card-img-top member-photo" 
+               alt="Omar Soliman" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EOS%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Systems & Software</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Omar Soliman</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Systems Lead</p>
+          <p class="card-text text-body-secondary">Systems architecture, low-level engineering, and technical stewardship across ECorE platforms.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/eng-omarsoliman/" target="_blank" rel="noopener noreferrer" aria-label="Omar Soliman on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://github.com/eng-omarsoliman" target="_blank" rel="noopener noreferrer" aria-label="Omar Soliman on github">Github</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.facebook.com/omaribrahim2017/" target="_blank" rel="noopener noreferrer" aria-label="Omar Soliman on facebook">Facebook</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://x.com/eng_omarsoliman" target="_blank" rel="noopener noreferrer" aria-label="Omar Soliman on x">X / Twitter</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="systems" data-name="ahmed ibrahim">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">02</span>
+          <img src="https://avatars.githubusercontent.com/u/225318593?v=4" 
+               class="card-img-top member-photo" 
+               alt="Ahmed Ibrahim" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EAI%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Systems & Software</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Ahmed Ibrahim</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Software Engineer</p>
+          <p class="card-text text-body-secondary">Web platforms, software systems, and open-source infrastructure for student engineering.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://l3b4nk4.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Ibrahim on website">Website ↗</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://github.com/L3B4nk4" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Ibrahim on github">Github</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/l3b4nk4/" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Ibrahim on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://x.com/L3B4nk4" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Ibrahim on x">X / Twitter</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="embedded" data-name="basem mousa">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">03</span>
+          <img src="https://avatars.githubusercontent.com/u/182371000?v=4" 
+               class="card-img-top member-photo" 
+               alt="Basem Mousa" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EBM%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Embedded & Hardware</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Basem Mousa</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Embedded Engineer</p>
+          <p class="card-text text-body-secondary">Embedded firmware, microcontroller architectures, and real-time control systems.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/basemmousa1?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Basem Mousa on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://github.com/Basem241005" target="_blank" rel="noopener noreferrer" aria-label="Basem Mousa on github">Github</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="embedded" data-name="asmaa el banna">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">04</span>
+          <img src="https://avatars.githubusercontent.com/u/225400867?v=4" 
+               class="card-img-top member-photo" 
+               alt="Asmaa El Banna" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EAE%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Embedded & Hardware</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Asmaa El Banna</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Digital Systems</p>
+          <p class="card-text text-body-secondary">Digital design, hardware description, and integrated system testing.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/asmaa-el-banna-140385349" target="_blank" rel="noopener noreferrer" aria-label="Asmaa El Banna on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://github.com/asmaaalbnna-png" target="_blank" rel="noopener noreferrer" aria-label="Asmaa El Banna on github">Github</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="comms" data-name="ahmed sarhan">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">05</span>
+          <img src="https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/490266646_1704333343625262_8039459661653095614_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Xmj5LyQvZNgQ7kNvwG_-Smo&_nc_oc=AdpQxk4d13elK_3_qMbFKchGpfq8aoiV4VJorCvmoLT979HXCDHHwf1J9MN6n1UM_qQ&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=P_eClhTmn0KcjdIwlMmj3w&_nc_ss=7b2a8&oh=00_Af_FRZoOX-bUNLVLACVNI7yqMni5O1Zzi8pbK7Do7Qe5Mw&oe=6A37EC37" 
+               class="card-img-top member-photo" 
+               alt="Ahmed Sarhan" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EAS%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Communications & RF</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Ahmed Sarhan</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Comms Engineer</p>
+          <p class="card-text text-body-secondary">Telecommunications systems, wireless channels, and signal propagation analysis.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/ahmed-sarhan-685aa0375?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Sarhan on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.facebook.com/share/1DS5Jfze75/" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Sarhan on facebook">Facebook</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="comms" data-name="haneen saber">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">06</span>
+          <img src="https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/702403965_1360164732630460_6893683718028883644_n.jpg?stp=dst-jpg_tt6&cstp=mx1188x1200&ctp=s1188x1200&_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Triz5ORMXpsQ7kNvwGODEET&_nc_oc=AdoGlI7YHSvtSNEm_n2v9njEG8FsijTdiTGm3a0Oimb4mSi5_FsDJTQv8C_RX0d6pL4&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=3z3GYh-u8dOju30AlxVlkg&_nc_ss=7b2a8&oh=00_Af8ZeVkbGOjHssvAtT-w3psTGFLXLoBOZBlPhTk39saTig&oe=6A37FEF4" 
+               class="card-img-top member-photo" 
+               alt="Haneen Saber" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EHS%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Communications & RF</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Haneen Saber</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Telecommunications</p>
+          <p class="card-text text-body-secondary">Network communication, RF signal processing, and telecommunications theory.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/haneen-mohamed-saber-845816378" target="_blank" rel="noopener noreferrer" aria-label="Haneen Saber on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.facebook.com/share/197US33JCJ/" target="_blank" rel="noopener noreferrer" aria-label="Haneen Saber on facebook">Facebook</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://x.com/HaneenM97213" target="_blank" rel="noopener noreferrer" aria-label="Haneen Saber on x">X / Twitter</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="embedded" data-name="ahmed yaser">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">07</span>
+          <img src="https://avatars.githubusercontent.com/u/96890399?v=4" 
+               class="card-img-top member-photo" 
+               alt="Ahmed Yaser" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EAY%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Embedded & Hardware</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Ahmed Yaser</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Electronics Engineer</p>
+          <p class="card-text text-body-secondary">Hardware circuits, embedded sensors, and electronics design prototyping.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/eng-ahmedyaser/" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Yaser on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://github.com/eng-ahmedyaser" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Yaser on github">Github</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://x.com/eng_ahmedyaser" target="_blank" rel="noopener noreferrer" aria-label="Ahmed Yaser on x">X / Twitter</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="systems" data-name="taha eleraky">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">08</span>
+          <img src="https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/524169270_2166709513807884_8130001151937480936_n.jpg?stp=dst-jpg_tt6&cstp=mx872x883&ctp=s872x883&_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=nniKH9WVYmsQ7kNvwGtT5Nh&_nc_oc=Adqapsjyo_FUqGuUilCCf3MK0VarlGNizqEm1acePOujPwEwvWyj3-M87GSmpNHjosE&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=uzNtBZ_dFohkR1hmPLm_2Q&_nc_ss=7b289&oh=00_Af8f4nJp8wAWQ35IXyMs5OR5v6rEc_LWO0LbeSKQv2jMlA&oe=6A384CD6" 
+               class="card-img-top member-photo" 
+               alt="Taha Eleraky" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3ETE%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Systems & Software</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Taha Eleraky</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Systems Engineer</p>
+          <p class="card-text text-body-secondary">Computing systems, embedded software, and automation workflows.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/taha-eleraky-89116a364/" target="_blank" rel="noopener noreferrer" aria-label="Taha Eleraky on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.facebook.com/taha.eleraky.2025" target="_blank" rel="noopener noreferrer" aria-label="Taha Eleraky on facebook">Facebook</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="embedded" data-name="ameen ramadan">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">09</span>
+          <img src="https://avatars.githubusercontent.com/u/202317878?v=4" 
+               class="card-img-top member-photo" 
+               alt="Ameen Ramadan" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EAR%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Embedded & Hardware</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Ameen Ramadan</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Firmware Engineer</p>
+          <p class="card-text text-body-secondary">Embedded firmware development, RTOS environments, and microcontroller peripherals.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/ameen-ramadan/" target="_blank" rel="noopener noreferrer" aria-label="Ameen Ramadan on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://github.com/Ameen278" target="_blank" rel="noopener noreferrer" aria-label="Ameen Ramadan on github">Github</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="embedded" data-name="mohamed attia">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">10</span>
+          <img src="https://avatars.githubusercontent.com/u/86308081?v=4" 
+               class="card-img-top member-photo" 
+               alt="Mohamed Attia" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EMA%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Embedded & Hardware</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Mohamed Attia</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Digital Systems</p>
+          <p class="card-text text-body-secondary">Digital architecture, logic design, and hardware-software verification.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/mohamed-attia-67852a1b2" target="_blank" rel="noopener noreferrer" aria-label="Mohamed Attia on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://github.com/Mo-3at" target="_blank" rel="noopener noreferrer" aria-label="Mohamed Attia on github">Github</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.facebook.com/TSM.BASEET5/" target="_blank" rel="noopener noreferrer" aria-label="Mohamed Attia on facebook">Facebook</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="embedded" data-name="hamdi shawke">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">11</span>
+          <img src="https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/721225643_1785060325815703_3083119537596347194_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=kxSPVZLiBykQ7kNvwGiE24L&_nc_oc=Ado3E8FzVXy_4nixkidgZv8olCdLBF3bXJz6n8pONnk8SI8175DUZ8mW2-OcuMOSnGk&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=GxADUV7903v3n6JLAEgJUQ&_nc_ss=7b289&oh=00_Af_2te_VVBiy4DDXS4XryrUksHBm2qlg-ceHMl0rD3iJqQ&oe=6A3878E8" 
+               class="card-img-top member-photo" 
+               alt="Hamdi Shawke" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EHS%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Embedded & Hardware</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Hamdi Shawke</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Hardware Engineer</p>
+          <p class="card-text text-body-secondary">Circuit board design, power systems, and electronic components integration.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/hamdi-shawke-142011406/" target="_blank" rel="noopener noreferrer" aria-label="Hamdi Shawke on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.facebook.com/share/1XjmfR6pqJ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Hamdi Shawke on facebook">Facebook</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="comms" data-name="tasneem ahmed">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">12</span>
+          <img src="https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/724560326_122300231108018469_979962262817647881_n.jpg?stp=dst-jpg_tt6&cstp=mx2029x2048&ctp=s2029x2048&_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YSsOa4gZIUYQ7kNvwFedETl&_nc_oc=Adr7d8LkAA9YWiDjOkCRJ2FnJT_ZT579amifp-06zuMYkfxfqSavU2fsGzIh0Z7wQLY&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=H8daHcOMi02qDLk_RofA4A&_nc_ss=7b2a8&oh=00_Af9SBtX405lwQfHFlhmp7nubI7HOSkQgsF6Oych_q6JH5w&oe=6A3A0358" 
+               class="card-img-top member-photo" 
+               alt="Tasneem Ahmed" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3ETA%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Communications & RF</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Tasneem Ahmed</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Communications</p>
+          <p class="card-text text-body-secondary">Digital communication protocols, signal processing, and RF communications.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/tasneem-ahmed-963705336" target="_blank" rel="noopener noreferrer" aria-label="Tasneem Ahmed on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.facebook.com/share/17kssQvUxn/" target="_blank" rel="noopener noreferrer" aria-label="Tasneem Ahmed on facebook">Facebook</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+
+    <div class="col-md-6 col-xl-4 member-col" data-track="systems" data-name="mohamed galal">
+      <article class="card member-card h-100" data-tilt>
+        <div class="member-avatar">
+          <span class="member-index">13</span>
+          <img src="https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/530430783_2042807719856665_5066462390404692907_n.jpg?stp=dst-jpg_tt6&cstp=mx1008x1012&ctp=s1008x1012&_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YTokqm7PawMQ7kNvwHeX3-i&_nc_oc=AdrLJhaqZvECvD2g1m4IE02_hkj3htZW3FUQPCbaD4QzxJpGao7ruLdRW--ieTg8OUA&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=FVK8Wi_ng300Td8X9grdDQ&_nc_ss=7b2a8&oh=00_Af9Cd_SdoyjkXcC58z8F8tpVSzfOT1EeQN41s1ixJ3Y3DQ&oe=6A3A0A02" 
+               class="card-img-top member-photo" 
+               alt="Mohamed Galal" 
+               loading="lazy" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22270%22%20viewBox%3D%220%200%20300%20270%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg_grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2303233a%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23073452%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cpattern%20id%3D%22diag_grid%22%20width%3D%2216%22%20height%3D%2216%22%20patternUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2016%200%20L%200%200%200%2016%22%20fill%3D%22none%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.08%29%22%20stroke-width%3D%221%22/%3E%0A%20%20%20%20%3C/pattern%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23bg_grad%29%22/%3E%0A%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url%28%23diag_grid%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22115%22%20r%3D%2250%22%20fill%3D%22rgba%280%2C%20100%2C%20158%2C%200.25%29%22%20stroke%3D%22%232b82ad%22%20stroke-width%3D%222%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22127%22%20font-family%3D%22%27Space%20Grotesk%27%2C%20-apple-system%2C%20sans-serif%22%20font-size%3D%2236%22%20font-weight%3D%22700%22%20fill%3D%22%23eef8f5%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EMG%3C/text%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22195%22%20font-family%3D%22%27IBM%20Plex%20Mono%27%2C%20monospace%22%20font-size%3D%2211%22%20fill%3D%22%23e9a33c%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%223%22%3EECorE%20//%20BOARD%3C/text%3E%0A%20%20%3Cline%20x1%3D%2260%22%20y1%3D%22225%22%20x2%3D%22240%22%20y2%3D%22225%22%20stroke%3D%22rgba%28103%2C%20200%2C%20217%2C%200.25%29%22%20stroke-width%3D%221%22%20stroke-dasharray%3D%224%204%22/%3E%0A%3C/svg%3E';">
+          <div class="member-track-badge">Systems & Software</div>
+        </div>
+        <div class="card-body position-relative">
+          <h2 class="h4 card-title">Mohamed Galal</h2>
+          <p class="card-subtitle text-body-secondary mb-2 font-monospace small">Board Member & Systems Engineer</p>
+          <p class="card-text text-body-secondary">Embedded firmware, systems test automation, and engineering leadership.</p>
+          <div class="d-flex flex-wrap member-links mt-3">
+            <a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.linkedin.com/in/mohamed-galal-15934b288?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Mohamed Galal on linkedin">Linkedin</a>
+<a class="btn btn-sm btn-outline-secondary member-link-btn" href="https://www.facebook.com/share/14hZFFqvZW5/" target="_blank" rel="noopener noreferrer" aria-label="Mohamed Galal on facebook">Facebook</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+          </div>
+
+          <!-- No results placeholder -->
+          <div id="noResultsMsg" class="p-5 text-center d-none border border-secondary-subtle my-4">
+            <p class="mono-font text-body-secondary mb-1">NO MATCHING MEMBERS LOCATED</p>
+            <p class="small text-secondary mb-0">Try clearing the search query or changing active track filter.</p>
+          </div>
+        </section>
+
+        <!-- Engineering Pillars / Technical Scope -->
+        <section id="engineering-pillars" class="my-5 pt-4 border-top border-secondary-subtle reveal-on-scroll">
+          <div class="mb-4">
+            <p class="section-kicker mb-1">Curriculum &amp; Fields of Mastery</p>
+            <h2 class="display-6 brand-font fw-bold">Engineering Pillars<span style="color: var(--ecore-gold);">.</span></h2>
+            <p class="text-body-secondary lead fs-6">The core domains explored, engineered, and mastered by our teams.</p>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="pillar-card">
+                <div class="pillar-icon">01 // EMBEDDED</div>
+                <h3 class="h5 brand-font mb-2">Embedded Systems &amp; Real-Time Firmware</h3>
+                <p class="small text-body-secondary mb-0">Microcontroller architectures (ARM Cortex-M, RISC-V), peripheral drivers (SPI, I2C, UART, CAN), and deterministic RTOS scheduling for mission-critical tasks.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="pillar-card">
+                <div class="pillar-icon">02 // DIGITAL</div>
+                <h3 class="h5 brand-font mb-2">Digital IC Design &amp; Hardware Description</h3>
+                <p class="small text-body-secondary mb-0">RTL synthesis with Verilog/VHDL, FPGA prototyping, timing constraint closure, state machines, and hardware acceleration architectures.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="pillar-card">
+                <div class="pillar-icon">03 // COMMS</div>
+                <h3 class="h5 brand-font mb-2">Wireless Communications &amp; RF Engineering</h3>
+                <p class="small text-body-secondary mb-0">Signal modulation, SDR experimentation, channel estimation, antenna simulations, and wireless sensor telemetry networks.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="pillar-card">
+                <div class="pillar-icon">04 // SYSTEMS</div>
+                <h3 class="h5 brand-font mb-2">Systems Architecture &amp; Low-Level Software</h3>
+                <p class="small text-body-secondary mb-0">Operating systems internals, cross-compilers, bare-metal memory modeling, high-throughput backend services, and automated CI pipelines.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick-Connect Action -->
+  <a href="https://wa.me/201040198259" target="_blank" rel="noopener" class="floating-wa-btn" aria-label="Contact ECorE on WhatsApp">
+    <span class="wa-ripple" aria-hidden="true"></span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.07C9.33 7.07 9.09 7.15 8.89 7.37C8.69 7.59 8.12 8.12 8.12 9.21C8.12 10.3 8.91 11.35 9.02 11.5C9.13 11.65 10.58 13.88 12.8 14.84C13.33 15.07 13.74 15.21 14.06 15.31C14.6 15.48 15.08 15.45 15.46 15.39C15.89 15.33 16.78 14.86 16.96 14.34C17.15 13.82 17.15 13.38 17.09 13.28C17.03 13.19 16.89 13.13 16.68 13.03C16.48 12.93 15.49 12.44 15.3 12.38C15.12 12.31 14.98 12.28 14.85 12.48C14.71 12.68 14.34 13.13 14.23 13.26C14.12 13.39 14 13.4 13.8 13.3C13.59 13.2 12.72 12.91 11.69 11.99C10.89 11.28 10.35 10.4 10.25 10.22C10.15 10.05 10.24 9.95 10.34 9.85C10.43 9.76 10.55 9.61 10.65 9.5C10.75 9.38 10.79 9.3 10.85 9.17C10.92 9.04 10.88 8.92 10.83 8.82C10.78 8.72 10.39 7.76 10.22 7.36C10.06 6.96 9.9 7.02 9.77 7.02C9.65 7.02 9.53 7.07 9.53 7.07Z"/></svg>
+    <span>Chat WhatsApp</span>
+  </a>
+
+  <!-- Toast HUD for Copy Confirmation -->
+  <div id="toastHud" class="toast-hud" role="alert" aria-live="assertive">
+    <span style="color: #69f0ae;">✔</span>
+    <span id="toastMsg">Copied +20 10 40198259 to clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bd-footer ecore-footer mt-auto py-5 border-top border-secondary-subtle">
+    <div class="container-xxl px-4 text-body-secondary">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="d-inline-flex align-items-center mb-2 text-decoration-none" href="./index.html">
+            <img class="footer-logo me-2" src="./logo.png" alt="ECorE" width="40" height="40" onerror="this.onerror=null; this.src='./White and Black Elegant System Logo.png';">
+            <span class="fs-5 brand-font fw-bold text-body-emphasis">ECorE</span>
+          </a>
+          <p class="small text-body-secondary mb-2">
+            Electronics and Communications student team at Mansoura University. A public record of systems work, research, and releases.
+          </p>
+          <p class="mono-font small text-secondary">
+            &copy; 2026 ECorE. All rights reserved.
+          </p>
+        </div>
+
+        <div class="col-6 col-lg-2 offset-lg-1">
+          <h5 class="mono-font small text-uppercase mb-3" style="color: var(--ecore-gold);">Directory</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="#board-members" class="text-body-secondary text-decoration-none">Board Members</a></li>
+            <li class="mb-2"><a href="./connect.html" class="text-body-secondary text-decoration-none">Connect &amp; Hotline</a></li>
+            <li class="mb-2"><a href="#engineering-pillars" class="text-body-secondary text-decoration-none">Curriculum</a></li>
+            <li class="mb-2"><a href="https://ecore-mu.github.io/archive/" target="_blank" rel="noopener" class="text-body-secondary text-decoration-none">Research Archive</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="mono-font small text-uppercase mb-3" style="color: var(--ecore-cyan);">Official Channels</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="https://www.linkedin.com/company/ecoremu/" target="_blank" rel="noopener" class="text-body-secondary text-decoration-none">LinkedIn ↗</a></li>
+            <li class="mb-2"><a href="https://www.facebook.com/ECorEMU" target="_blank" rel="noopener" class="text-body-secondary text-decoration-none">Facebook ↗</a></li>
+            <li class="mb-2"><a href="https://wa.me/201040198259" target="_blank" rel="noopener" class="text-body-secondary text-decoration-none">WhatsApp ↗</a></li>
+            <li class="mb-2"><a href="https://github.com/ECorE-mu" target="_blank" rel="noopener" class="text-body-secondary text-decoration-none">GitHub Org ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <h5 class="mono-font small text-uppercase mb-3" style="color: var(--ecore-gold);">Direct Reach-out</h5>
+          <p class="small text-body-secondary mb-2">WhatsApp / Phone:</p>
+          <a href="tel:+201040198259" class="mono-font fw-bold text-decoration-none d-block mb-3" style="color: #69f0ae;">
+            +20 10 40198259
+          </a>
+          <button class="btn btn-sm btn-outline-secondary mono-font copy-phone-btn" data-phone="+20 10 40198259">
+            Copy Phone Number 📋
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Interactive Scripts (Animations, Tilt, Filter, Counter, Theme) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Theme Switcher (Dark / Light)
+      const themeToggleBtn = document.getElementById("themeToggleBtn");
+      const themeIcon = document.getElementById("themeIcon");
+      const htmlEl = document.documentElement;
+
+      const savedTheme = localStorage.getItem("ecore-theme") || "dark";
+      htmlEl.setAttribute("data-bs-theme", savedTheme);
+      updateThemeBtn(savedTheme);
+
+      themeToggleBtn.addEventListener("click", () => {
+        const current = htmlEl.getAttribute("data-bs-theme");
+        const next = current === "dark" ? "light" : "dark";
+        htmlEl.setAttribute("data-bs-theme", next);
+        localStorage.setItem("ecore-theme", next);
+        updateThemeBtn(next);
+      });
+
+      function updateThemeBtn(theme) {
+        themeIcon.textContent = theme === "dark" ? "☀ Light" : "☾ Dark";
+      }
+
+      // 2. Typewriter Transmission Feed
+      const tickerTextEl = document.getElementById("tickerText");
+      const messages = [
+        "ECorE // COHORT 2026 // 13 DIRECTORS REGISTERED",
+        "MASTERING EMBEDDED SYSTEMS, VLSI, DSP & COMMS",
+        "OFFICIAL CHANNELS: LINKEDIN &bull; FACEBOOK &bull; WHATSAPP",
+        "DIRECT LINE: +20 10 40198259 // OPEN FOR COLLABORATION"
+      ];
+      let msgIdx = 0;
+      let charIdx = 0;
+      let isDeleting = false;
+
+      function typeTicker() {
+        const curMsg = messages[msgIdx];
+        if (isDeleting) {
+          tickerTextEl.textContent = curMsg.substring(0, charIdx - 1);
+          charIdx--;
+        } else {
+          tickerTextEl.textContent = curMsg.substring(0, charIdx + 1);
+          charIdx++;
+        }
+
+        let speed = isDeleting ? 25 : 55;
+        if (!isDeleting && charIdx === curMsg.length) {
+          speed = 2200;
+          isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+          isDeleting = false;
+          msgIdx = (msgIdx + 1) % messages.length;
+          speed = 400;
+        }
+        setTimeout(typeTicker, speed);
+      }
+      typeTicker();
+
+      // 3. Animated Telemetry Counters
+      const counters = document.querySelectorAll(".counter-val");
+      let countersStarted = false;
+
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !countersStarted) {
+            countersStarted = true;
+            counters.forEach(counter => {
+              const target = +counter.getAttribute("data-target");
+              let current = 0;
+              const duration = 1200;
+              const stepTime = 20;
+              const increment = target / (duration / stepTime);
+
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                  counter.innerHTML = target + (target === 100 ? '<span class="accent">%</span>' : '');
+                  clearInterval(timer);
+                } else {
+                  counter.innerHTML = Math.floor(current) + (target === 100 ? '<span class="accent">%</span>' : '');
+                }
+              }, stepTime);
+            });
+          }
+        });
+      }, { threshold: 0.3 });
+
+      if (counters.length > 0) {
+        counterObserver.observe(counters[0].closest("section"));
+      }
+
+      // 4. Staggered Scroll Reveal
+      const revealItems = document.querySelectorAll(".reveal-on-scroll");
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealItems.forEach(item => revealObserver.observe(item));
+
+      // 5. Member 3D Tilt Micro-Interaction
+      const cards = document.querySelectorAll("[data-tilt]");
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!prefersReduced) {
+        cards.forEach(card => {
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const cx = rect.width / 2;
+            const cy = rect.height / 2;
+            const dx = (x - cx) / cx;
+            const dy = (y - cy) / cy;
+
+            card.style.transform = `perspective(900px) rotateX(${-dy * 5}deg) rotateY(${dx * 5}deg) translateY(-6px)`;
+          });
+
+          card.addEventListener("mouseleave", () => {
+            card.style.transform = "";
+          });
+        });
+      }
+
+      // 6. Interactive Search & Track Filtering
+      const searchInput = document.getElementById("memberSearchInput");
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const memberCols = document.querySelectorAll(".member-col");
+      const noResultsMsg = document.getElementById("noResultsMsg");
+
+      let currentFilter = "all";
+      let currentQuery = "";
+
+      function filterMembers() {
+        let visibleCount = 0;
+        memberCols.forEach(col => {
+          const track = col.getAttribute("data-track");
+          const name = col.getAttribute("data-name");
+
+          const matchesTrack = (currentFilter === "all" || track === currentFilter);
+          const matchesQuery = (currentQuery === "" || name.includes(currentQuery));
+
+          if (matchesTrack && matchesQuery) {
+            col.classList.remove("d-none");
+            visibleCount++;
+          } else {
+            col.classList.add("d-none");
+          }
+        });
+
+        if (visibleCount === 0) {
+          noResultsMsg.classList.remove("d-none");
+        } else {
+          noResultsMsg.classList.add("d-none");
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentFilter = btn.getAttribute("data-filter");
+          filterMembers();
+        });
+      });
+
+      searchInput.addEventListener("input", (e) => {
+        currentQuery = e.target.value.trim().toLowerCase();
+        filterMembers();
+      });
+
+      // 7. Clipboard Copy with Toast Feedback
+      const toastHud = document.getElementById("toastHud");
+      const toastMsg = document.getElementById("toastMsg");
+      const copyBtns = document.querySelectorAll(".copy-phone-btn");
+
+      copyBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const phone = btn.getAttribute("data-phone") || "+20 10 40198259";
+          navigator.clipboard.writeText(phone).then(() => {
+            showToast(`Copied ${phone} to clipboard!`);
+          }).catch(() => {
+            showToast(`Direct Line: ${phone}`);
+          });
+        });
+      });
+
+      let toastTimeout;
+      function showToast(text) {
+        clearTimeout(toastTimeout);
+        toastMsg.textContent = text;
+        toastHud.classList.add("show");
+        toastTimeout = setTimeout(() => {
+          toastHud.classList.remove("show");
+        }, 2800);
+      }
+
+      // 8. Interactive Subtle Particle Matrix on Sidebar Console
+      const canvas = document.getElementById("consoleCanvas");
+      if (canvas && !prefersReduced) {
+        const ctx = canvas.getContext("2d");
+        let width = canvas.width = canvas.parentElement.offsetWidth;
+        let height = canvas.height = canvas.parentElement.offsetHeight;
+
+        window.addEventListener("resize", () => {
+          if (canvas.parentElement) {
+            width = canvas.width = canvas.parentElement.offsetWidth;
+            height = canvas.height = canvas.parentElement.offsetHeight;
+          }
+        });
+
+        const nodes = [];
+        for (let i = 0; i < 22; i++) {
+          nodes.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 2 + 1
+          });
+        }
+
+        function drawMatrix() {
+          ctx.clearRect(0, 0, width, height);
+
+          // Draw connections
+          ctx.strokeStyle = "rgba(103, 200, 217, 0.08)";
+          ctx.lineWidth = 1;
+          for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+              const dx = nodes[i].x - nodes[j].x;
+              const dy = nodes[i].y - nodes[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 85) {
+                ctx.beginPath();
+                ctx.moveTo(nodes[i].x, nodes[i].y);
+                ctx.lineTo(nodes[j].x, nodes[j].y);
+                ctx.stroke();
+              }
+            }
+          }
+
+          // Draw nodes
+          ctx.fillStyle = "rgba(233, 163, 60, 0.45)";
+          for (let i = 0; i < nodes.length; i++) {
+            const n = nodes[i];
+            n.x += n.vx;
+            n.y += n.vy;
+
+            if (n.x < 0 || n.x > width) n.vx *= -1;
+            if (n.y < 0 || n.y > height) n.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          requestAnimationFrame(drawMatrix);
+        }
+        drawMatrix();
+      }
+    });
+  </script>
+</body>
+</html>

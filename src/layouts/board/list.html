@@ -5,12 +5,52 @@
       <p class="section-kicker">People / stewardship</p>
       <h1>Board<span>.</span></h1>
     </div>
-    <p>Independent thinkers and engineers responsible for the direction, integrity, and continuity of ECorE.</p>
+    <p>Independent thinkers, researchers, and engineers responsible for the direction, architectural integrity, and continuity of ECorE.</p>
   </header>
+
+  <!-- Official Channels Hub -->
+  <section class="my-4 p-4 border border-secondary-subtle" style="background: var(--ecore-surface-raised);">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="h5 brand-font mb-0">Official Channels &amp; Direct Hotline</h2>
+      <span class="font-monospace small text-body-secondary">ECorE // CONNECT</span>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="p-3 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(10, 102, 194, 0.3) !important; background: rgba(10, 102, 194, 0.05);">
+          <div>
+            <h3 class="h6 brand-font mb-1 text-primary">LinkedIn</h3>
+            <p class="font-monospace small mb-2 text-body-secondary">@ecoremu</p>
+            <p class="small text-body-secondary mb-3">Announcements, technical publications, career updates, and partnerships.</p>
+          </div>
+          <a class="btn btn-sm btn-outline-primary font-monospace w-100" href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">Follow LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(24, 119, 242, 0.3) !important; background: rgba(24, 119, 242, 0.05);">
+          <div>
+            <h3 class="h6 brand-font mb-1" style="color: #1877f2;">Facebook</h3>
+            <p class="font-monospace small mb-2 text-body-secondary">@ECorEMU</p>
+            <p class="small text-body-secondary mb-3">Community events, photo logs, campus activities, and student workshops.</p>
+          </div>
+          <a class="btn btn-sm btn-outline-primary font-monospace w-100" href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener">Visit Facebook ↗</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(37, 211, 102, 0.3) !important; background: rgba(37, 211, 102, 0.05);">
+          <div>
+            <h3 class="h6 brand-font mb-1" style="color: #25d366;">WhatsApp Hotline</h3>
+            <p class="font-monospace small mb-2" style="color: #25d366;">{{ .Site.Params.whatsapp }}</p>
+            <p class="small text-body-secondary mb-3">Direct line for student questions, sponsorship, and technical team reach-out.</p>
+          </div>
+          <a class="btn btn-sm btn-success font-monospace w-100" href="{{ .Site.Params.whatsapp_link }}" target="_blank" rel="noopener">Chat WhatsApp ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="board-register">
     <span>{{ len site.Data.members }} {{ cond (eq (len site.Data.members) 1) "member" "members" }}</span>
-    <span>ECorE / Board</span>
+    <span>ECorE / Board &bull; Season 2026</span>
   </div>
 
   <div class="row board-grid">

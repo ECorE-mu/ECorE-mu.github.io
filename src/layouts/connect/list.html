@@ -1,0 +1,163 @@
+{{ define "main" }}
+<div class="board-container mx-auto py-5">
+  <header class="board-heading">
+    <div>
+      <p class="section-kicker">Communications // Official Touchpoints</p>
+      <h1>Connect<span>.</span></h1>
+    </div>
+    <p>Official communication channels to reach the board directors, researchers, and engineers of ECorE.</p>
+  </header>
+
+  <!-- 3 Major Spotlight Cards -->
+  <section class="my-4">
+    <div class="row g-4">
+      <!-- 1. WhatsApp Card -->
+      <div class="col-md-4">
+        <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(37, 211, 102, 0.4) !important; background: var(--ecore-surface-raised);">
+          <div>
+            <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle font-monospace mb-2">HOTLINE</span>
+            <h2 class="h5 brand-font mb-1" style="color: #25d366;">WhatsApp &amp; Call</h2>
+            <p class="font-monospace fw-bold fs-6 mb-2" style="color: #25d366;">{{ .Site.Params.whatsapp }}</p>
+            <p class="small text-body-secondary mb-3">Fastest path for rapid inquiries, recruitment questions, partnerships, and technical collaboration.</p>
+          </div>
+          <div class="d-grid gap-2">
+            <a class="btn btn-sm btn-success font-monospace" href="{{ .Site.Params.whatsapp_link }}" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.whatsapp }}">Copy Number 📋</button>
+              <button class="btn btn-sm btn-outline-secondary font-monospace toggle-qr-btn" data-target="qr-hugo-wa">QR 📷</button>
+            </div>
+            <div id="qr-hugo-wa" class="qr-container text-center pt-2 d-none">
+              <img src="{{ "/assets/img/qr-wa.png" | relURL }}" alt="WhatsApp QR" width="130" height="130" class="border p-1 bg-white">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. LinkedIn Card -->
+      <div class="col-md-4">
+        <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(10, 102, 194, 0.4) !important; background: var(--ecore-surface-raised);">
+          <div>
+            <span class="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle font-monospace mb-2">PROFESSIONAL</span>
+            <h2 class="h5 brand-font mb-1 text-primary">LinkedIn Network</h2>
+            <p class="font-monospace fw-bold fs-6 mb-2" style="color: #0a66c2;">@ecoremu</p>
+            <p class="small text-body-secondary mb-3">Corporate updates, technical releases, student milestones, publications, and recruitment calls.</p>
+          </div>
+          <div class="d-grid gap-2">
+            <a class="btn btn-sm btn-primary font-monospace" href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">Follow LinkedIn ↗</a>
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.linkedin }}">Copy Link 📋</button>
+              <button class="btn btn-sm btn-outline-secondary font-monospace toggle-qr-btn" data-target="qr-hugo-in">QR 📷</button>
+            </div>
+            <div id="qr-hugo-in" class="qr-container text-center pt-2 d-none">
+              <img src="{{ "/assets/img/qr-linkedin.png" | relURL }}" alt="LinkedIn QR" width="130" height="130" class="border p-1 bg-white">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Facebook Card -->
+      <div class="col-md-4">
+        <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(24, 119, 242, 0.4) !important; background: var(--ecore-surface-raised);">
+          <div>
+            <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle font-monospace mb-2">COMMUNITY</span>
+            <h2 class="h5 brand-font mb-1" style="color: #1877f2;">Facebook Hub</h2>
+            <p class="font-monospace fw-bold fs-6 mb-2" style="color: #1877f2;">@ECorEMU</p>
+            <p class="small text-body-secondary mb-3">Campus hackathons, workshop recordings, student forums, photo journals, and announcements.</p>
+          </div>
+          <div class="d-grid gap-2">
+            <a class="btn btn-sm btn-outline-primary font-monospace" href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener">Visit Facebook ↗</a>
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.facebook }}">Copy Link 📋</button>
+              <button class="btn btn-sm btn-outline-secondary font-monospace toggle-qr-btn" data-target="qr-hugo-fb">QR 📷</button>
+            </div>
+            <div id="qr-hugo-fb" class="qr-container text-center pt-2 d-none">
+              <img src="{{ "/assets/img/qr-fb.png" | relURL }}" alt="Facebook QR" width="130" height="130" class="border p-1 bg-white">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive WhatsApp Composer -->
+  <section class="my-5 p-4 border border-secondary-subtle" style="background: var(--ecore-surface-raised);">
+    <p class="section-kicker mb-1" style="color: #25d366;">Interactive Dispatcher</p>
+    <h2 class="h4 brand-font mb-2">Compose Direct WhatsApp Message</h2>
+    <p class="small text-body-secondary mb-3">Compose your inquiry below to launch WhatsApp pre-filled for <strong style="color: #25d366;">{{ .Site.Params.whatsapp }}</strong>.</p>
+
+    <div class="row g-2 mb-3">
+      <div class="col-sm-6">
+        <label class="form-label font-monospace small text-body-secondary" for="hugoSenderName">YOUR NAME:</label>
+        <input type="text" id="hugoSenderName" class="form-control font-monospace form-control-sm" placeholder="e.g. Eng. Hazem">
+      </div>
+      <div class="col-sm-6">
+        <label class="form-label font-monospace small text-body-secondary" for="hugoSenderOrg">AFFILIATION / UNIVERSITY:</label>
+        <input type="text" id="hugoSenderOrg" class="form-control font-monospace form-control-sm" placeholder="e.g. Mansoura Univ">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label font-monospace small text-body-secondary" for="hugoSenderMsg">YOUR MESSAGE:</label>
+      <textarea id="hugoSenderMsg" class="form-control form-control-sm" rows="3" placeholder="Hello ECorE team, I would like to inquire about..."></textarea>
+    </div>
+
+    <button id="hugoSendWaBtn" class="btn btn-success font-monospace px-4 py-2 w-100 fw-bold">
+      Launch WhatsApp Chat ({{ .Site.Params.whatsapp }}) ↗
+    </button>
+  </section>
+
+  <!-- Headquarters Info -->
+  <section class="my-4 p-4 border border-secondary-subtle" style="background: var(--ecore-surface);">
+    <h3 class="h5 brand-font mb-2">Team Base &amp; Location</h3>
+    <p class="small text-body-secondary mb-3">Faculty of Engineering, Department of Electronics and Communications (ECE), Mansoura University, Egypt.</p>
+    <div class="row g-2 small font-monospace text-body-secondary">
+      <div class="col-md-4">📍 Mansoura, Dakahlia, Egypt</div>
+      <div class="col-md-4">⏰ Sun - Thu: 09:00 - 18:00 (GMT+2)</div>
+      <div class="col-md-4">📞 {{ .Site.Params.whatsapp }}</div>
+    </div>
+  </section>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // QR toggles
+    document.querySelectorAll(".toggle-qr-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = document.getElementById(btn.getAttribute("data-target"));
+        if (target) {
+          target.classList.toggle("d-none");
+          btn.textContent = target.classList.contains("d-none") ? "QR 📷" : "Hide ✕";
+        }
+      });
+    });
+
+    // Copy buttons
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const text = btn.getAttribute("data-copy");
+        navigator.clipboard.writeText(text);
+        const originalText = btn.textContent;
+        btn.textContent = "Copied! ✔";
+        setTimeout(() => btn.textContent = originalText, 2000);
+      });
+    });
+
+    // Composer
+    const sendBtn = document.getElementById("hugoSendWaBtn");
+    if (sendBtn) {
+      sendBtn.addEventListener("click", () => {
+        const name = (document.getElementById("hugoSenderName").value || "").trim();
+        const org = (document.getElementById("hugoSenderOrg").value || "").trim();
+        const msg = (document.getElementById("hugoSenderMsg").value || "").trim() || "Hello ECorE team, I would like to inquire about your engineering activities.";
+
+        let fullText = "*ECorE Contact Inquiry*\\n";
+        if (name) fullText += "*Name:* " + name + "\\n";
+        if (org) fullText += "*Affiliation:* " + org + "\\n";
+        fullText += "*Message:* " + msg;
+
+        window.open("https://wa.me/201040198259?text=" + encodeURIComponent(fullText), "_blank");
+      });
+    }
+  });
+</script>
+{{ end }}

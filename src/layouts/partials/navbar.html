@@ -24,6 +24,9 @@
             <a class="nav-link py-2 px-0 px-lg-2{{ if eq .Section "board" }} active{{ end }}" href="{{ "/board/" | relURL }}">Board</a>
           </li>
           <li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2{{ if eq .Section "connect" }} active{{ end }}" href="{{ "/connect/" | relURL }}">Connect</a>
+          </li>
+          <li class="nav-item col-6 col-lg-auto">
             <a class="nav-link py-2 px-0 px-lg-2{{ if eq .Page.Title "Archive" }} active{{ end }}" href="{{ "/archive/" | relURL }}">Archive</a>
           </li>
         </ul>
