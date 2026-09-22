@@ -1,206 +1,517 @@
 {{ define "main" }}
-<div class="board-container mx-auto py-5">
-  <header class="board-heading">
-    <div>
-      <p class="section-kicker">Communications // Direct Touchpoints</p>
-      <h1>Connect<span>.</span></h1>
+<div class="board-container mx-auto py-4">
+
+  <!-- Header & Live Telemetry -->
+  <header class="board-heading pb-4 mb-4 border-bottom border-secondary-subtle">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+      <div>
+        <p class="section-kicker mb-1">Communications // Direct Touchpoints</p>
+        <h1 class="display-4 fw-bold mb-1">Connect<span>.</span></h1>
+      </div>
+      <div class="d-flex flex-wrap align-items-center gap-2">
+        <div class="clock-hud-badge">
+          <span>⏱ MANSOURA:</span>
+          <span id="hugoClockTime" class="fw-bold" style="color: var(--ecore-gold);">--:--:--</span>
+          <span class="badge bg-success-subtle text-success small" style="font-size: 0.65rem;">LIVE</span>
+        </div>
+      </div>
     </div>
-    <p>Official communication channels to reach the board directors, researchers, and engineers of ECorE.</p>
+    <p class="lead text-body-secondary mt-3 mb-0" style="max-width: 820px;">
+      Direct communication gateway to reach the board directors, engineering leads, researchers, and student leaders of ECorE.
+    </p>
   </header>
 
-  <!-- 4 Major Touchpoint Cards -->
-  <section class="my-4">
-    <div class="row g-4">
-      <!-- 1. WhatsApp Card -->
-      <div class="col-md-6 col-xl-3">
-        <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(37, 211, 102, 0.4) !important; background: var(--ecore-surface-raised);">
-          <div>
-            <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle font-monospace mb-2">HOTLINE</span>
-            <h2 class="h5 brand-font mb-1" style="color: #25d366;">WhatsApp &amp; Call</h2>
-            <div class="small font-monospace text-body-secondary mb-2">Replies &lt; 45 mins</div>
-            <p class="font-monospace fw-bold fs-6 mb-2" style="color: #25d366;">{{ .Site.Params.whatsapp }}</p>
-            <p class="small text-body-secondary mb-3">Fastest path for rapid inquiries, recruitment questions, and sponsorships.</p>
+  <!-- Bento Grid Communication Gateway (No Interactive Dispatcher) -->
+  <section class="connect-bento-grid">
+
+    <!-- Bento 1: WhatsApp Hotline (Hero 8-column card) -->
+    <article class="bento-card bento-span-8 accent-wa">
+      <div>
+        <div class="d-flex justify-content-between align-items-start mb-3">
+          <div class="bento-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.07C9.33 7.07 9.09 7.15 8.89 7.37C8.69 7.59 8.12 8.12 8.12 9.21C8.12 10.3 8.91 11.35 9.02 11.5C9.13 11.65 10.58 13.88 12.8 14.84C13.33 15.07 13.74 15.21 14.06 15.31C14.6 15.48 15.08 15.45 15.46 15.39C15.89 15.33 16.78 14.86 16.96 14.34C17.15 13.82 17.15 13.38 17.09 13.28C17.03 13.19 16.89 13.13 16.68 13.03C16.48 12.93 15.49 12.44 15.3 12.38C15.12 12.31 14.98 12.28 14.85 12.48C14.71 12.68 14.34 13.13 14.23 13.26C14.12 13.39 14 13.4 13.8 13.3C13.59 13.2 12.72 12.91 11.69 11.99C10.89 11.28 10.35 10.4 10.25 10.22C10.15 10.05 10.24 9.95 10.34 9.85C10.43 9.76 10.55 9.61 10.65 9.5C10.75 9.38 10.79 9.3 10.85 9.17C10.92 9.04 10.88 8.92 10.83 8.82C10.78 8.72 10.39 7.76 10.22 7.36C10.06 6.96 9.9 7.02 9.77 7.02C9.65 7.02 9.53 7.07 9.53 7.07Z"/></svg>
           </div>
-          <div class="d-grid gap-2">
-            <a class="btn btn-sm btn-success font-monospace" href="{{ .Site.Params.whatsapp_link }}" target="_blank" rel="noopener">Chat Now ↗</a>
-            <div class="d-flex gap-1">
-              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.whatsapp }}">Copy 📋</button>
-              <button class="btn btn-sm btn-outline-secondary font-monospace toggle-qr-btn" data-target="qr-hugo-wa">QR 📷</button>
+          <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle font-monospace py-1 px-2">
+            <span class="pulse-indicator me-1"></span> PRIMARY HOTLINE
+          </span>
+        </div>
+
+        <p class="section-kicker mb-1" style="color: #25D366;">Instant Messenger &amp; Direct Call</p>
+        <h2 class="h3 brand-font mb-1">WhatsApp Direct Line</h2>
+        <div class="bento-hero-number" style="color: #69f0ae;">
+          {{ .Site.Params.whatsapp }}
+        </div>
+
+        <p class="text-body-secondary lead fs-6 mb-4" style="max-width: 580px;">
+          Direct line for fast consultations, recruitment questions, partnership agreements, and technical collaborations. Monitored continuously by our leadership board.
+        </p>
+      </div>
+
+      <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary-subtle">
+        <a href="{{ .Site.Params.whatsapp_link }}" target="_blank" rel="noopener" class="btn btn-success font-monospace px-4 py-2 fw-semibold">
+          Chat on WhatsApp ↗
+        </a>
+        <a href="tel:+201040198259" class="btn btn-outline-secondary font-monospace px-3 py-2">
+          Call Direct 📞
+        </a>
+        <button class="btn btn-outline-secondary font-monospace px-3 py-2 copy-btn" data-copy="{{ .Site.Params.whatsapp }}">
+          Copy Number 📋
+        </button>
+      </div>
+    </article>
+
+    <!-- Bento 2: WhatsApp QR Code (4-column card) -->
+    <article class="bento-card bento-span-4 accent-wa text-center">
+      <div>
+        <span class="font-monospace small text-uppercase" style="color: #25D366; letter-spacing: 0.1em;">SCAN TO CHAT</span>
+        <h3 class="h5 brand-font mt-1 mb-3">Instant Mobile QR</h3>
+        
+        <div class="qr-preview-box mb-3">
+          <img src="{{ "/assets/img/qr-wa.png" | relURL }}" alt="WhatsApp QR Code" width="130" height="130" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=25D366&bgcolor=03233a&data=https%3A%2F%2Fwa.me%2F201040198259';">
+        </div>
+
+        <p class="small text-body-secondary mb-0 font-monospace" style="font-size: 0.72rem;">
+          Point your phone camera to start a direct WhatsApp chat with ECorE.
+        </p>
+      </div>
+
+      <div class="mt-3 pt-2 border-top border-secondary-subtle">
+        <span class="small font-monospace text-body-secondary" style="font-size: 0.7rem;">Average response: &lt; 30 mins</span>
+      </div>
+    </article>
+
+    <!-- Bento 3: LinkedIn Corporate (6-column card) -->
+    <article class="bento-card bento-span-6 accent-in">
+      <div>
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <div class="bento-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.81a1.45 1.45 0 0 0-1.45 1.45 1.45 1.45 0 0 0 1.45 1.45 1.45 1.45 0 0 0 1.45-1.45 1.45 1.45 0 0 0-1.45-1.45Z"/></svg>
+          </div>
+          <span class="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle font-monospace py-1 px-2">PROFESSIONAL</span>
+        </div>
+
+        <p class="section-kicker mb-1" style="color: #0A66C2;">Corporate &amp; Academic Network</p>
+        <h2 class="h4 brand-font mb-1">Official LinkedIn Page</h2>
+        <p class="font-monospace fw-bold fs-5 mb-2" style="color: #70b5f9;">@ecoremu</p>
+        
+        <p class="small text-body-secondary mb-4">
+          Corporate partnerships, technical research releases, student accolades, alumni achievements, and career opportunities in electronics engineering.
+        </p>
+      </div>
+
+      <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary-subtle">
+        <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener" class="btn btn-primary font-monospace px-3">
+          Follow on LinkedIn ↗
+        </a>
+        <button class="btn btn-outline-secondary font-monospace px-3 copy-btn" data-copy="{{ .Site.Params.linkedin }}">
+          Copy Link 📋
+        </button>
+      </div>
+    </article>
+
+    <!-- Bento 4: Facebook Community (6-column card) -->
+    <article class="bento-card bento-span-6 accent-fb">
+      <div>
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <div class="bento-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+          </div>
+          <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle font-monospace py-1 px-2">COMMUNITY</span>
+        </div>
+
+        <p class="section-kicker mb-1" style="color: #1877F2;">Campus &amp; Student Life</p>
+        <h2 class="h4 brand-font mb-1">Official Facebook Hub</h2>
+        <p class="font-monospace fw-bold fs-5 mb-2" style="color: #82b9fc;">@ECorEMU</p>
+
+        <p class="small text-body-secondary mb-4">
+          Student workshops, technical hackathons, campus competition coverage, photo journals, and public student engineering activities.
+        </p>
+      </div>
+
+      <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary-subtle">
+        <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener" class="btn btn-primary font-monospace px-3" style="background-color: #1877f2; border-color: #1877f2;">
+          Join on Facebook ↗
+        </a>
+        <button class="btn btn-outline-secondary font-monospace px-3 copy-btn" data-copy="{{ .Site.Params.facebook }}">
+          Copy Link 📋
+        </button>
+      </div>
+    </article>
+
+    <!-- Bento 5: Open Source & GitHub (4-column card) -->
+    <article class="bento-card bento-span-4 accent-gh">
+      <div>
+        <div class="bento-icon-box">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+        </div>
+
+        <span class="font-monospace small text-uppercase" style="color: var(--ecore-cyan);">CODE REPOSITORIES</span>
+        <h2 class="h5 brand-font mb-1">GitHub Organization</h2>
+        <p class="font-monospace small fw-bold mb-2 text-body-emphasis">@ECorE-mu</p>
+        
+        <p class="small text-body-secondary mb-3">
+          Verilog &amp; RTL modules, microcontroller firmware, DSP algorithms, and open systems research.
+        </p>
+      </div>
+
+      <div class="pt-3 border-top border-secondary-subtle">
+        <a href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary font-monospace w-100">
+          Explore Repositories ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- Bento 6: Official Email (4-column card) -->
+    <article class="bento-card bento-span-4 accent-cyan">
+      <div>
+        <div class="bento-icon-box">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </div>
+
+        <span class="font-monospace small text-uppercase" style="color: #4dd0e1;">WRITTEN INQUIRIES</span>
+        <h2 class="h5 brand-font mb-1">Official Email</h2>
+        <p class="font-monospace small fw-bold mb-2" style="color: #4dd0e1;">ECorEmu@gmail.com</p>
+
+        <p class="small text-body-secondary mb-3">
+          Formal invitations, academic documents, sponsorship proposals, and press inquiries.
+        </p>
+      </div>
+
+      <div class="d-flex gap-2 pt-3 border-top border-secondary-subtle">
+        <a href="mailto:ECorEmu@gmail.com" class="btn btn-sm btn-outline-info font-monospace flex-grow-1">
+          Send Email ↗
+        </a>
+        <button class="btn btn-sm btn-outline-secondary font-monospace copy-btn" data-copy="ECorEmu@gmail.com">
+          Copy 📋
+        </button>
+      </div>
+    </article>
+
+    <!-- Bento 7: Operational Hours & SLA (4-column card) -->
+    <article class="bento-card bento-span-4 accent-gold">
+      <div>
+        <div class="bento-icon-box">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+
+        <span class="font-monospace small text-uppercase" style="color: var(--ecore-gold);">RESPONSE SLA</span>
+        <h2 class="h5 brand-font mb-1">Hours &amp; Coverage</h2>
+        <p class="font-monospace small fw-bold mb-2 text-warning">Sun – Thu: 09:00 - 18:00</p>
+
+        <p class="small text-body-secondary mb-3">
+          Hotline monitored 7 days a week for urgent student competitions and partner requests.
+        </p>
+      </div>
+
+      <div class="pt-3 border-top border-secondary-subtle">
+        <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle font-monospace py-1 px-2 w-100 text-center">
+          ACTIVE COHORT 2026
+        </span>
+      </div>
+    </article>
+
+    <!-- Bento 8: Physical Headquarters (12-column full width card) -->
+    <article class="bento-card bento-span-12 accent-cyan">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-8">
+          <span class="font-monospace small text-uppercase" style="color: var(--ecore-cyan);">PHYSICAL HEADQUARTERS</span>
+          <h2 class="h4 brand-font mb-2">Faculty of Engineering, Mansoura University</h2>
+          <p class="text-body-secondary small mb-3">
+            Department of Electronics and Communications Engineering (ECE), Mansoura University, Dakahlia Governorate, Egypt.
+          </p>
+
+          <div class="row g-3 small font-monospace text-body-secondary mb-3">
+            <div class="col-sm-6">
+              <span class="text-body-secondary d-block">GPS COORDINATES:</span>
+              <strong class="text-body-emphasis">31.0428° N, 31.3533° E</strong>
             </div>
-            <div id="qr-hugo-wa" class="qr-container text-center pt-2 d-none">
-              <img src="{{ "/assets/img/qr-wa.png" | relURL }}" alt="WhatsApp QR" width="130" height="130" class="border p-1 bg-white">
+            <div class="col-sm-6">
+              <span class="text-body-secondary d-block">FACULTY / DIVISION:</span>
+              <strong class="text-body-emphasis">ECE Department, Lab B-204</strong>
             </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a href="https://maps.google.com/?q=Faculty+of+Engineering+Mansoura+University" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary font-monospace">
+              Open in Google Maps ↗
+            </a>
+            <a href="{{ "/board/" | relURL }}" class="btn btn-sm btn-outline-secondary font-monospace">
+              Meet Board Members ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 text-center">
+          <div class="p-3 border" style="border-color: var(--ecore-line) !important; background: rgba(0,0,0,0.25); border-radius: 6px;">
+            <div class="font-monospace small text-body-secondary mb-1">HEADQUARTERS STATUS</div>
+            <div class="brand-font fs-5 fw-bold" style="color: #69f0ae;">ONLINE // ACTIVE</div>
+            <div class="font-monospace text-body-secondary" style="font-size: 0.72rem;">Mansoura University, Egypt</div>
           </div>
         </div>
       </div>
+    </article>
 
-      <!-- 2. LinkedIn Card -->
-      <div class="col-md-6 col-xl-3">
-        <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(10, 102, 194, 0.4) !important; background: var(--ecore-surface-raised);">
-          <div>
-            <span class="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle font-monospace mb-2">PROFESSIONAL</span>
-            <h2 class="h5 brand-font mb-1 text-primary">LinkedIn</h2>
-            <div class="small font-monospace text-body-secondary mb-2">Corporate Network</div>
-            <p class="font-monospace fw-bold fs-6 mb-2" style="color: #0a66c2;">@ecoremu</p>
-            <p class="small text-body-secondary mb-3">Corporate partnerships, research releases, alumni achievements, and career updates.</p>
-          </div>
-          <div class="d-grid gap-2">
-            <a class="btn btn-sm btn-primary font-monospace" href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">Follow ↗</a>
-            <div class="d-flex gap-1">
-              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.linkedin }}">Copy 📋</button>
-              <button class="btn btn-sm btn-outline-secondary font-monospace toggle-qr-btn" data-target="qr-hugo-in">QR 📷</button>
-            </div>
-            <div id="qr-hugo-in" class="qr-container text-center pt-2 d-none">
-              <img src="{{ "/assets/img/qr-linkedin.png" | relURL }}" alt="LinkedIn QR" width="130" height="130" class="border p-1 bg-white">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. Facebook Card -->
-      <div class="col-md-6 col-xl-3">
-        <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(24, 119, 242, 0.4) !important; background: var(--ecore-surface-raised);">
-          <div>
-            <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle font-monospace mb-2">COMMUNITY</span>
-            <h2 class="h5 brand-font mb-1" style="color: #1877f2;">Facebook</h2>
-            <div class="small font-monospace text-body-secondary mb-2">Student Hub</div>
-            <p class="font-monospace fw-bold fs-6 mb-2" style="color: #1877f2;">@ECorEMU</p>
-            <p class="small text-body-secondary mb-3">Campus workshops, student competitions, photo journals, and announcements.</p>
-          </div>
-          <div class="d-grid gap-2">
-            <a class="btn btn-sm btn-outline-primary font-monospace" href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener">Join ↗</a>
-            <div class="d-flex gap-1">
-              <button class="btn btn-sm btn-outline-secondary font-monospace flex-grow-1 copy-btn" data-copy="{{ .Site.Params.facebook }}">Copy 📋</button>
-              <button class="btn btn-sm btn-outline-secondary font-monospace toggle-qr-btn" data-target="qr-hugo-fb">QR 📷</button>
-            </div>
-            <div id="qr-hugo-fb" class="qr-container text-center pt-2 d-none">
-              <img src="{{ "/assets/img/qr-fb.png" | relURL }}" alt="Facebook QR" width="130" height="130" class="border p-1 bg-white">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. GitHub Card -->
-      <div class="col-md-6 col-xl-3">
-        <div class="p-4 border h-100 d-flex flex-column justify-content-between" style="border-color: rgba(255, 255, 255, 0.2) !important; background: var(--ecore-surface-raised);">
-          <div>
-            <span class="badge bg-secondary-subtle text-secondary-emphasis border border-secondary-subtle font-monospace mb-2">OPEN SOURCE</span>
-            <h2 class="h5 brand-font mb-1">GitHub</h2>
-            <div class="small font-monospace text-body-secondary mb-2">Engineering Code</div>
-            <p class="font-monospace fw-bold fs-6 mb-2">@ECorE-mu</p>
-            <p class="small text-body-secondary mb-3">Public engineering repositories, RTL hardware modules, firmware architectures, and tools.</p>
-          </div>
-          <div class="d-grid gap-2">
-            <a class="btn btn-sm btn-outline-secondary font-monospace" href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener">Explore ↗</a>
-            <button class="btn btn-sm btn-outline-secondary font-monospace copy-btn" data-copy="{{ .Site.Params.github_org }}">Copy 📋</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive WhatsApp Composer -->
-  <section class="my-5 p-4 border border-secondary-subtle" style="background: var(--ecore-surface-raised);">
-    <p class="section-kicker mb-1" style="color: #25d366;">Interactive Dispatcher</p>
-    <h2 class="h4 brand-font mb-2">Compose Direct WhatsApp Inquiry</h2>
-    <p class="small text-body-secondary mb-3">Compose your inquiry below to launch WhatsApp pre-filled for <strong style="color: #25d366;">{{ .Site.Params.whatsapp }}</strong>.</p>
-
-    <!-- Topic Presets -->
-    <div class="d-flex flex-wrap gap-2 mb-3" id="hugoTopicChips">
-      <button type="button" class="btn btn-sm btn-outline-secondary font-monospace active" data-topic="General Inquiry" data-template="Hello ECorE leadership, I would like to learn more about your engineering activities and upcoming events.">General Inquiry</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary font-monospace" data-topic="Sponsorship &amp; Partnership" data-template="Greetings ECorE team, our organization is interested in discussing partnership and project sponsorship opportunities.">Sponsorship</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary font-monospace" data-topic="Join the Team / Recruitment" data-template="Hello! I am an engineering student interested in joining ECorE. Could you please share the application dates and requirements?">Recruitment</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary font-monospace" data-topic="Technical Collaboration" data-template="Hi ECorE engineers, we would like to collaborate on an embedded systems / RF research project.">Collaboration</button>
-    </div>
-
-    <div class="row g-2 mb-3">
-      <div class="col-sm-6">
-        <label class="form-label font-monospace small text-body-secondary" for="hugoSenderName">YOUR NAME:</label>
-        <input type="text" id="hugoSenderName" class="form-control font-monospace form-control-sm" placeholder="e.g. Eng. Ahmed">
-      </div>
-      <div class="col-sm-6">
-        <label class="form-label font-monospace small text-body-secondary" for="hugoSenderOrg">AFFILIATION / UNIVERSITY:</label>
-        <input type="text" id="hugoSenderOrg" class="form-control font-monospace form-control-sm" placeholder="e.g. Mansoura Univ">
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label font-monospace small text-body-secondary" for="hugoSenderMsg">YOUR MESSAGE:</label>
-      <textarea id="hugoSenderMsg" class="form-control form-control-sm" rows="3">Hello ECorE leadership, I would like to learn more about your engineering activities and upcoming events.</textarea>
-    </div>
-
-    <button id="hugoSendWaBtn" class="btn btn-success font-monospace px-4 py-2 w-100 fw-bold">
-      Launch WhatsApp Chat ({{ .Site.Params.whatsapp }}) ↗
-    </button>
-  </section>
-
-  <!-- Headquarters & Location -->
-  <section class="my-4 p-4 border border-secondary-subtle" style="background: var(--ecore-surface);">
-    <h3 class="h5 brand-font mb-2">Headquarters &amp; Physical Operations</h3>
-    <p class="small text-body-secondary mb-3">Faculty of Engineering, Department of Electronics and Communications (ECE), Mansoura University, Egypt.</p>
-    <div class="row g-2 small font-monospace text-body-secondary mb-3">
-      <div class="col-md-3">📍 Coordinates: 31.0428° N, 31.3533° E</div>
-      <div class="col-md-3">⏰ Sun - Thu: 09:00 - 18:00 (GMT+2)</div>
-      <div class="col-md-3">📞 Hotline: {{ .Site.Params.whatsapp }}</div>
-      <div class="col-md-3">✉ Email: ECorEmu@gmail.com</div>
-    </div>
-    <a href="https://maps.google.com/?q=Faculty+of+Engineering+Mansoura+University" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary font-monospace">
-      Open Google Maps ↗
-    </a>
   </section>
 </div>
 
+<!-- Floating WhatsApp Action Button -->
+<a href="{{ .Site.Params.whatsapp_link }}" target="_blank" rel="noopener" class="hugo-floating-wa" aria-label="Chat with ECorE on WhatsApp">
+  <span class="hugo-wa-ripple" aria-hidden="true"></span>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.07C9.33 7.07 9.09 7.15 8.89 7.37C8.69 7.59 8.12 8.12 8.12 9.21C8.12 10.3 8.91 11.35 9.02 11.5C9.13 11.65 10.58 13.88 12.8 14.84C13.33 15.07 13.74 15.21 14.06 15.31C14.6 15.48 15.08 15.45 15.46 15.39C15.89 15.33 16.78 14.86 16.96 14.34C17.15 13.82 17.15 13.38 17.09 13.28C17.03 13.19 16.89 13.13 16.68 13.03C16.48 12.93 15.49 12.44 15.3 12.38C15.12 12.31 14.98 12.28 14.85 12.48C14.71 12.68 14.34 13.13 14.23 13.26C14.12 13.39 14 13.4 13.8 13.3C13.59 13.2 12.72 12.91 11.69 11.99C10.89 11.28 10.35 10.4 10.25 10.22C10.15 10.05 10.24 9.95 10.34 9.85C10.43 9.76 10.55 9.61 10.65 9.5C10.75 9.38 10.79 9.3 10.85 9.17C10.92 9.04 10.88 8.92 10.83 8.82C10.78 8.72 10.39 7.76 10.22 7.36C10.06 6.96 9.9 7.02 9.77 7.02C9.65 7.02 9.53 7.07 9.53 7.07Z"/></svg>
+  <span>Chat WhatsApp</span>
+</a>
+
+<!-- Toast HUD -->
+<div id="hugoToastHud" class="hugo-toast-hud" role="alert" aria-live="assertive">
+  <span style="color: #69f0ae;">✔</span>
+  <span id="hugoToastMsg">Copied to clipboard!</span>
+</div>
+
+<style>
+  /* Bento Grid System for Hugo */
+  .connect-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .bento-card {
+    background: var(--ecore-surface-raised);
+    border: 1px solid var(--ecore-line);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px var(--ecore-shadow-strong);
+    border-color: var(--card-accent, var(--ecore-cyan));
+  }
+
+  .bento-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--card-accent, var(--ecore-blue));
+    transition: height 0.25s ease;
+  }
+
+  .bento-card:hover::before {
+    height: 6px;
+  }
+
+  .bento-span-12 { grid-column: span 12; }
+  .bento-span-8  { grid-column: span 8; }
+  .bento-span-6  { grid-column: span 6; }
+  .bento-span-4  { grid-column: span 4; }
+
+  @media (max-width: 991.98px) {
+    .bento-span-8, .bento-span-6, .bento-span-4 { grid-column: span 12; }
+  }
+
+  .accent-wa { --card-accent: #25D366; }
+  .accent-in { --card-accent: #0A66C2; }
+  .accent-fb { --card-accent: #1877F2; }
+  .accent-gold { --card-accent: #e9a33c; }
+  .accent-cyan { --card-accent: #2b82ad; }
+  .accent-gh { --card-accent: #8b949e; }
+
+  .bento-hero-number {
+    font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+    font-weight: 700;
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.1;
+    margin: 0.5rem 0 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .bento-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--ecore-line);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .accent-wa .bento-icon-box { background: rgba(37, 211, 102, 0.15); color: #25D366; }
+  .accent-in .bento-icon-box { background: rgba(10, 102, 194, 0.15); color: #0A66C2; }
+  .accent-fb .bento-icon-box { background: rgba(24, 119, 242, 0.15); color: #1877F2; }
+  .accent-gold .bento-icon-box { background: rgba(233, 163, 60, 0.15); color: #e9a33c; }
+  .accent-cyan .bento-icon-box { background: rgba(43, 130, 173, 0.15); color: #4dd0e1; }
+  .accent-gh .bento-icon-box { background: rgba(255, 255, 255, 0.08); color: var(--ecore-ink); }
+
+  .qr-preview-box {
+    background: #03233a;
+    border: 1px solid var(--ecore-line);
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .qr-preview-box img {
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 4px;
+  }
+
+  .clock-hud-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    color: var(--ecore-gold);
+    padding: 0.4rem 0.85rem;
+    background: rgba(233, 163, 60, 0.08);
+    border: 1px solid rgba(233, 163, 60, 0.25);
+  }
+
+  .pulse-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #25D366;
+    display: inline-block;
+    box-shadow: 0 0 6px #25D366;
+    animation: pulse-dot 1.8s infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+  }
+
+  .hugo-toast-hud {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--ecore-console);
+    color: #f2fffa;
+    border: 1px solid var(--ecore-gold);
+    padding: 0.8rem 1.5rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    z-index: 10000;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hugo-toast-hud.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  .hugo-floating-wa {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: #25D366;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .hugo-floating-wa:hover {
+    background: #20ba59;
+    color: #ffffff;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 14px 38px rgba(37, 211, 102, 0.6);
+  }
+
+  .hugo-wa-ripple {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50px;
+    border: 2px solid #25D366;
+    animation: hugo-ripple 2.2s infinite cubic-bezier(0.1, 0.8, 0.3, 1);
+    pointer-events: none;
+  }
+
+  @keyframes hugo-ripple {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.3, 1.6); opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // QR toggles
-    document.querySelectorAll(".toggle-qr-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const target = document.getElementById(btn.getAttribute("data-target"));
-        if (target) {
-          target.classList.toggle("d-none");
-          btn.textContent = target.classList.contains("d-none") ? "QR 📷" : "Hide ✕";
-        }
-      });
-    });
+    // 1. Live Clock for Mansoura
+    const clockEl = document.getElementById("hugoClockTime");
+    function updateHugoClock() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString("en-US", { timeZone: "Africa/Cairo", hour12: true });
+      if (clockEl) clockEl.textContent = timeStr;
+    }
+    setInterval(updateHugoClock, 1000);
+    updateHugoClock();
 
-    // Copy buttons
+    // 2. Copy button handling
+    const toastHud = document.getElementById("hugoToastHud");
+    const toastMsg = document.getElementById("hugoToastMsg");
+    let toastTimer;
+
     document.querySelectorAll(".copy-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         const text = btn.getAttribute("data-copy");
-        navigator.clipboard.writeText(text);
-        const originalText = btn.textContent;
-        btn.textContent = "Copied! ✔";
-        setTimeout(() => btn.textContent = originalText, 2000);
+        if (!text) return;
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(`Copied ${text} to clipboard!`);
+        }).catch(() => {
+          showToast(`Selected: ${text}`);
+        });
       });
     });
 
-    // Topic chips in Hugo
-    let activeTopic = "General Inquiry";
-    const msgArea = document.getElementById("hugoSenderMsg");
-    document.querySelectorAll("#hugoTopicChips button").forEach(chip => {
-      chip.addEventListener("click", () => {
-        document.querySelectorAll("#hugoTopicChips button").forEach(c => c.classList.remove("active"));
-        chip.classList.add("active");
-        activeTopic = chip.getAttribute("data-topic");
-        if (msgArea) msgArea.value = chip.getAttribute("data-template");
-      });
-    });
-
-    // Composer Send
-    const sendBtn = document.getElementById("hugoSendWaBtn");
-    if (sendBtn) {
-      sendBtn.addEventListener("click", () => {
-        const name = (document.getElementById("hugoSenderName").value || "").trim();
-        const org = (document.getElementById("hugoSenderOrg").value || "").trim();
-        const msg = (msgArea.value || "").trim();
-
-        let fullText = "*ECorE Official Inquiry: " + activeTopic + "*\\n";
-        if (name) fullText += "*Name:* " + name + "\\n";
-        if (org) fullText += "*Affiliation:* " + org + "\\n";
-        fullText += "*Message:* " + msg;
-
-        window.open("https://wa.me/201040198259?text=" + encodeURIComponent(fullText), "_blank");
-      });
+    function showToast(msg) {
+      if (!toastHud || !toastMsg) return;
+      clearTimeout(toastTimer);
+      toastMsg.textContent = msg;
+      toastHud.classList.add("show");
+      toastTimer = setTimeout(() => {
+        toastHud.classList.remove("show");
+      }, 2800);
     }
   });
 </script>
