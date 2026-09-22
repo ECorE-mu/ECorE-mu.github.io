@@ -10,7 +10,7 @@
       </div>
       <div class="d-flex flex-wrap align-items-center gap-2">
         <div class="clock-hud-badge">
-          <span>⏱ MANSOURA:</span>
+          <span>⏱ LOCAL TIME:</span>
           <span id="hugoClockTime" class="fw-bold" style="color: var(--ecore-gold);">--:--:--</span>
           <span class="badge bg-success-subtle text-success small" style="font-size: 0.65rem;">LIVE</span>
         </div>
@@ -21,7 +21,7 @@
     </p>
   </header>
 
-  <!-- Bento Grid Communication Gateway (No Interactive Dispatcher) -->
+  <!-- Bento Grid Communication Gateway -->
   <section class="connect-bento-grid">
 
     <!-- Bento 1: WhatsApp Hotline (Hero 8-column card) -->
@@ -36,7 +36,7 @@
           </span>
         </div>
 
-        <p class="section-kicker mb-1" style="color: #25D366;">Instant Messenger &amp; Direct Call</p>
+        <p class="section-kicker mb-1" style="color: #25D366;">Instant Messenger &amp; Direct Hotline</p>
         <h2 class="h3 brand-font mb-1">WhatsApp Direct Line</h2>
         <div class="bento-hero-number" style="color: #69f0ae;">
           {{ .Site.Params.whatsapp }}
@@ -50,9 +50,6 @@
       <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary-subtle">
         <a href="{{ .Site.Params.whatsapp_link }}" target="_blank" rel="noopener" class="btn btn-success font-monospace px-4 py-2 fw-semibold">
           Chat on WhatsApp ↗
-        </a>
-        <a href="tel:+201040198259" class="btn btn-outline-secondary font-monospace px-3 py-2">
-          Call Direct 📞
         </a>
         <button class="btn btn-outline-secondary font-monospace px-3 py-2 copy-btn" data-copy="{{ .Site.Params.whatsapp }}">
           Copy Number 📋
@@ -80,8 +77,8 @@
       </div>
     </article>
 
-    <!-- Bento 3: LinkedIn Corporate (6-column card) -->
-    <article class="bento-card bento-span-6 accent-in">
+    <!-- Bento 3: LinkedIn Corporate (4-column card) -->
+    <article class="bento-card bento-span-4 accent-in">
       <div>
         <div class="d-flex justify-content-between align-items-start mb-2">
           <div class="bento-icon-box">
@@ -109,8 +106,8 @@
       </div>
     </article>
 
-    <!-- Bento 4: Facebook Community (6-column card) -->
-    <article class="bento-card bento-span-6 accent-fb">
+    <!-- Bento 4: Facebook Community (4-column card) -->
+    <article class="bento-card bento-span-4 accent-fb">
       <div>
         <div class="d-flex justify-content-between align-items-start mb-2">
           <div class="bento-icon-box">
@@ -138,116 +135,32 @@
       </div>
     </article>
 
-    <!-- Bento 5: Open Source & GitHub (4-column card) -->
-    <article class="bento-card bento-span-4 accent-gh">
-      <div>
-        <div class="bento-icon-box">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
-        </div>
-
-        <span class="font-monospace small text-uppercase" style="color: var(--ecore-cyan);">CODE REPOSITORIES</span>
-        <h2 class="h5 brand-font mb-1">GitHub Organization</h2>
-        <p class="font-monospace small fw-bold mb-2 text-body-emphasis">@ECorE-mu</p>
-        
-        <p class="small text-body-secondary mb-3">
-          Verilog &amp; RTL modules, microcontroller firmware, DSP algorithms, and open systems research.
-        </p>
-      </div>
-
-      <div class="pt-3 border-top border-secondary-subtle">
-        <a href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary font-monospace w-100">
-          Explore Repositories ↗
-        </a>
-      </div>
-    </article>
-
-    <!-- Bento 6: Official Email (4-column card) -->
+    <!-- Bento 5: Official Email (4-column card) -->
     <article class="bento-card bento-span-4 accent-cyan">
       <div>
-        <div class="bento-icon-box">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <div class="bento-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle font-monospace py-1 px-2">OFFICIAL EMAIL</span>
         </div>
 
-        <span class="font-monospace small text-uppercase" style="color: #4dd0e1;">WRITTEN INQUIRIES</span>
-        <h2 class="h5 brand-font mb-1">Official Email</h2>
-        <p class="font-monospace small fw-bold mb-2" style="color: #4dd0e1;">ECorEmu@gmail.com</p>
+        <p class="section-kicker mb-1" style="color: #4dd0e1;">Written Communications</p>
+        <h2 class="h4 brand-font mb-1">Official Email Channel</h2>
+        <p class="font-monospace fw-bold fs-5 mb-2" style="color: #4dd0e1;">ECorEmu@gmail.com</p>
 
-        <p class="small text-body-secondary mb-3">
-          Formal invitations, academic documents, sponsorship proposals, and press inquiries.
+        <p class="small text-body-secondary mb-4">
+          Formal invitations, official academic documents, sponsorship proposals, research collaboration, and press inquiries.
         </p>
       </div>
 
-      <div class="d-flex gap-2 pt-3 border-top border-secondary-subtle">
-        <a href="mailto:ECorEmu@gmail.com" class="btn btn-sm btn-outline-info font-monospace flex-grow-1">
+      <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary-subtle">
+        <a href="mailto:ECorEmu@gmail.com" class="btn btn-outline-info font-monospace px-3">
           Send Email ↗
         </a>
-        <button class="btn btn-sm btn-outline-secondary font-monospace copy-btn" data-copy="ECorEmu@gmail.com">
-          Copy 📋
+        <button class="btn btn-outline-secondary font-monospace px-3 copy-btn" data-copy="ECorEmu@gmail.com">
+          Copy Email 📋
         </button>
-      </div>
-    </article>
-
-    <!-- Bento 7: Operational Hours & SLA (4-column card) -->
-    <article class="bento-card bento-span-4 accent-gold">
-      <div>
-        <div class="bento-icon-box">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-
-        <span class="font-monospace small text-uppercase" style="color: var(--ecore-gold);">RESPONSE SLA</span>
-        <h2 class="h5 brand-font mb-1">Hours &amp; Coverage</h2>
-        <p class="font-monospace small fw-bold mb-2 text-warning">Sun – Thu: 09:00 - 18:00</p>
-
-        <p class="small text-body-secondary mb-3">
-          Hotline monitored 7 days a week for urgent student competitions and partner requests.
-        </p>
-      </div>
-
-      <div class="pt-3 border-top border-secondary-subtle">
-        <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle font-monospace py-1 px-2 w-100 text-center">
-          ACTIVE COHORT 2026
-        </span>
-      </div>
-    </article>
-
-    <!-- Bento 8: Physical Headquarters (12-column full width card) -->
-    <article class="bento-card bento-span-12 accent-cyan">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-8">
-          <span class="font-monospace small text-uppercase" style="color: var(--ecore-cyan);">PHYSICAL HEADQUARTERS</span>
-          <h2 class="h4 brand-font mb-2">Faculty of Engineering, Mansoura University</h2>
-          <p class="text-body-secondary small mb-3">
-            Department of Electronics and Communications Engineering (ECE), Mansoura University, Dakahlia Governorate, Egypt.
-          </p>
-
-          <div class="row g-3 small font-monospace text-body-secondary mb-3">
-            <div class="col-sm-6">
-              <span class="text-body-secondary d-block">GPS COORDINATES:</span>
-              <strong class="text-body-emphasis">31.0428° N, 31.3533° E</strong>
-            </div>
-            <div class="col-sm-6">
-              <span class="text-body-secondary d-block">FACULTY / DIVISION:</span>
-              <strong class="text-body-emphasis">ECE Department, Lab B-204</strong>
-            </div>
-          </div>
-
-          <div class="d-flex flex-wrap gap-2">
-            <a href="https://maps.google.com/?q=Faculty+of+Engineering+Mansoura+University" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary font-monospace">
-              Open in Google Maps ↗
-            </a>
-            <a href="{{ "/board/" | relURL }}" class="btn btn-sm btn-outline-secondary font-monospace">
-              Meet Board Members ↗
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-4 text-center">
-          <div class="p-3 border" style="border-color: var(--ecore-line) !important; background: rgba(0,0,0,0.25); border-radius: 6px;">
-            <div class="font-monospace small text-body-secondary mb-1">HEADQUARTERS STATUS</div>
-            <div class="brand-font fs-5 fw-bold" style="color: #69f0ae;">ONLINE // ACTIVE</div>
-            <div class="font-monospace text-body-secondary" style="font-size: 0.72rem;">Mansoura University, Egypt</div>
-          </div>
-        </div>
       </div>
     </article>
 
@@ -323,7 +236,6 @@
   .accent-fb { --card-accent: #1877F2; }
   .accent-gold { --card-accent: #e9a33c; }
   .accent-cyan { --card-accent: #2b82ad; }
-  .accent-gh { --card-accent: #8b949e; }
 
   .bento-hero-number {
     font-size: clamp(1.8rem, 3.5vw, 2.75rem);
@@ -351,7 +263,6 @@
   .accent-fb .bento-icon-box { background: rgba(24, 119, 242, 0.15); color: #1877F2; }
   .accent-gold .bento-icon-box { background: rgba(233, 163, 60, 0.15); color: #e9a33c; }
   .accent-cyan .bento-icon-box { background: rgba(43, 130, 173, 0.15); color: #4dd0e1; }
-  .accent-gh .bento-icon-box { background: rgba(255, 255, 255, 0.08); color: var(--ecore-ink); }
 
   .qr-preview-box {
     background: #03233a;
@@ -477,11 +388,11 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // 1. Live Clock for Mansoura
+    // 1. Live Clock
     const clockEl = document.getElementById("hugoClockTime");
     function updateHugoClock() {
       const now = new Date();
-      const timeStr = now.toLocaleTimeString("en-US", { timeZone: "Africa/Cairo", hour12: true });
+      const timeStr = now.toLocaleTimeString("en-US", { hour12: true });
       if (clockEl) clockEl.textContent = timeStr;
     }
     setInterval(updateHugoClock, 1000);
